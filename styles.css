@@ -507,7 +507,7 @@ footer button {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #080911; /* Dark blue */
+    background-color: #000000; /* Dark blue */
     color: white;
     padding: 15px 20px;
     position: sticky;
