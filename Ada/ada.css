@@ -740,21 +740,39 @@ footer button {
 
 
 
+
+
 @media (max-width: 768px) {
-    .header nav {
-      flex-direction: column; /* Stack links vertically */
-      align-items: center;
-    }
-  
-    .header nav a {
-      padding: 10px;
-      border-bottom: 1px solid white;
-      width: 100%; /* Stretch links across the screen */
-      text-align: center;
-    }
   
     .subnav {
-      text-align: center;
+      padding: 15px 0; /* Increase padding for better mobile visibility */
+      font-size: 1rem; /* Adjust font size for mobile */
     }
-  }
-  
+
+
+.footer-content {
+flex-direction: column; /* Stack columns vertically */
+text-align: center; /* Center-align content */
+gap: 20px; /* Add spacing between sections */
+}
+
+.footer-links, .footer-column, .footer-apps {
+flex: 1 1 auto; /* Adjust width for stacking */
+margin-bottom: 20px; /* Add spacing between sections */
+}
+
+.subscribe-form {
+flex-direction: column; /* Stack input and button */
+gap: 10px; /* Space between input and button */
+align-items: center; /* Center the form */
+}
+
+.subscribe-form input[type="email"] {
+width: 100%; /* Full width input on mobile */
+}
+
+.subscribe-form button {
+width: 100%; /* Full width button on mobile */
+}
+}
+
