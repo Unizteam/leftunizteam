@@ -1,9 +1,12 @@
-// Pagination Logic
 const contentsPerPage = 20; // Number of contents per page
 let currentPage = 1; // Default to the first page
 
 // Select all content cards from the HTML
 const allContents = Array.from(document.querySelectorAll('.topic-cards .card'));
+
+// Initialize the Page from URL or Default to Page 1
+const urlParams = new URLSearchParams(window.location.search);
+currentPage = parseInt(urlParams.get('page')) || 1;
 
 // Function to Render Contents for the Current Page
 function renderContents() {
@@ -30,10 +33,11 @@ function updatePaginationControls() {
   paginationContainer.innerHTML = `
     <button id="prevPage" ${currentPage === 1 ? 'disabled' : ''}>Previous</button>
     <span>Page ${currentPage} of ${totalPages}</span>
-    <button id="nextPage" ${
-      currentPage === totalPages ? 'disabled' : ''
-    }>Next</button>
+    <button id="nextPage" ${currentPage === totalPages ? 'disabled' : ''}>Next</button>
   `;
+
+  // Update URL with current page (without reloading)
+  window.history.replaceState(null, '', `?page=${currentPage}`);
 
   // Add event listeners for pagination buttons
   document.getElementById('prevPage').addEventListener('click', () => {
@@ -49,12 +53,20 @@ function updatePaginationControls() {
   });
 }
 
-// Add header animation on page load
+// Add Header Animation on Page Load
 document.addEventListener("DOMContentLoaded", () => {
   const header = document.querySelector(".header-container");
   if (header) {
     header.style.animation = "fadeInUp 1s ease-out forwards";
   }
+});
+
+// Handle Back Navigation (Browser's Back Button)
+window.addEventListener('popstate', () => {
+  const urlParams = new URLSearchParams(window.location.search);
+  currentPage = parseInt(urlParams.get('page')) || 1;
+  renderContents();
+  window.scrollTo({ top: 0, behavior: 'smooth' }); // Smooth scroll to the top
 });
 
 // Initialize the Page
