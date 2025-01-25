@@ -59,6 +59,22 @@ document.addEventListener("DOMContentLoaded", () => {
   if (header) {
     header.style.animation = "fadeInUp 1s ease-out forwards";
   }
+
+  // Add event listeners for mobile header
+  const menuIcon = document.querySelector('.fa-bars');
+  const searchIcon = document.querySelector('.fa-search');
+
+  if (menuIcon) {
+    menuIcon.addEventListener('click', () => {
+      alert('Menu button clicked! Add your menu functionality here.');
+    });
+  }
+
+  if (searchIcon) {
+    searchIcon.addEventListener('click', () => {
+      alert('Search button clicked! Add your search functionality here.');
+    });
+  }
 });
 
 // Handle Back Navigation (Browser's Back Button)

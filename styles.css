@@ -35,7 +35,6 @@ body {
   text-decoration: none;
   font-size: 14px;
 }
-
 .subnav {
   background: #fedc00;
   padding: 5px 20px;
@@ -56,12 +55,12 @@ body::before {
   top: 0;
   left: 0;
   width: 100%;
-  height: 20px; /* Adjust the height for the blur effect */
-  background: rgba(0, 0, 0, 0.5); /* A dark translucent overlay */
+  height: 40px; /* Adjust the height for the blur effect */
   z-index: 998; /* Behind the header and subnav */
   backdrop-filter: blur(15px); /* Blur effect */
   -webkit-backdrop-filter: blur(15px); /* Safari support */
 }
+
 
 /* Hero Section */
 .hero {
@@ -445,11 +444,113 @@ footer button {
 }
 
 
+
+
+
+
+
+
+.mobile-header {
+  display: none;
+}
+
+
+/* Mobile-specific Header Design */
 @media (max-width: 768px) {
-  
+
+
+
+  /* Prevent horizontal scrolling */
+  body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Disable horizontal scrolling */
+  }
+
+  /* Center the topics section */
+  .topics {
+    max-width: 100%; /* Ensure the content fits within the viewport */
+    margin: 0 auto; /* Center the content */
+    padding: 10px; /* Add padding for spacing */
+    box-sizing: border-box; /* Include padding/border in width */
+  }
+
+  /* Adjust the topic cards container */
+  .topic-cards {
+    display: flex;
+    flex-direction: column; /* Stack cards vertically */
+    gap: 15px; /* Space between cards */
+    padding: 0; /* Remove unnecessary padding */
+    width: 100%; /* Ensure cards fit within the viewport */
+  }
+
+  /* Style individual cards */
+  .card {
+    width: 90%; /* Limit card width to 90% for better spacing */
+    margin: 0 auto; /* Center the card */
+    box-sizing: border-box; /* Include padding/border in width */
+    text-align: center; /* Center-align text inside the card */
+  }
+
+  /* Make images inside cards responsive */
+  .card img {
+    width: 100%; /* Make the image fit the card width */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+
   .subnav {
-    padding: 15px 0; /* Increase padding for better mobile visibility */
-    font-size: 1rem; /* Adjust font size for mobile */
+    display: none;
+  }
+
+  .mobile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #080911; /* Dark blue */
+    color: white;
+    padding: 15px 20px;
+    position: sticky;
+    top: 0; /* Stick to the top */
+    z-index: 1000; /* Ensure it stays above other elements */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Optional shadow */
+  }
+
+  /* Logo Section */
+  .mobile-header .logo {
+    font-size: 1.2rem; /* Slightly larger text for the name */
+    font-weight: bold; /* Emphasize the name */
+  }
+
+  /* Description Section */
+  .mobile-header .description {
+    font-size: 0.9rem; /* Smaller text for tagline */
+    font-style: italic; /* Make it stand out */
+  }
+
+  /* Header Icons */
+  .mobile-header .header-icons {
+    display: flex;
+    gap: 15px; /* Space between icons */
+  }
+
+  .mobile-header .header-icons i {
+    font-size: 1.2rem; /* Size of icons */
+    cursor: pointer; /* Change cursor on hover */
+  }
+
+  .mobile-header .header-icons i:hover {
+    color: #080911; /* Change color on hover */
+  }
+
+  /* Hide this header for larger screens */
+  .mobile-header {
+    display: flex;
+  }
+
+  /* Hide PC header on mobile */
+  .header {
+    display: none;
   }
 
 
@@ -480,4 +581,19 @@ width: 100%; /* Full width button on mobile */
 }
 
 
+@media (max-width: 768px) {
+  .article-section {
+    margin: 0 15px; /* Adds 15px margin on left and right */
+    padding: 10px; /* Adds padding inside the container */
+    border-radius: 8px; /* Optional: Adds rounded corners */
+  }
+
+  
+.content-card:hover {
+  transform: translateY(-10px);
+  background-color: #fedc00;
+  color: #041a2d;
+}
+
+}
 

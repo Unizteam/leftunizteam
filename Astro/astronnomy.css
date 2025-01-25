@@ -193,3 +193,10 @@ width: 100%; /* Full width button on mobile */
 }
 }
 
+@media (max-width: 768px) {
+  .article-section {
+    margin: 0 15px; /* Adds 15px margin on left and right */
+    padding: 10px; /* Adds padding inside the container */
+    border-radius: 8px; /* Optional: Adds rounded corners */
+  }
+}
