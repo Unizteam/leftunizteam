@@ -730,3 +730,31 @@ footer button {
     color: #ddd; /* Light gray for description */
     line-height: 1.5;
 }
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+    .header nav {
+      flex-direction: column; /* Stack links vertically */
+      align-items: center;
+    }
+  
+    .header nav a {
+      padding: 10px;
+      border-bottom: 1px solid white;
+      width: 100%; /* Stretch links across the screen */
+      text-align: center;
+    }
+  
+    .subnav {
+      text-align: center;
+    }
+  }
+  
