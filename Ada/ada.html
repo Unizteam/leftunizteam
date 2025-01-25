@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bayern Style Article</title>
+    <link rel="stylesheet" href="ada.css">
+</head>
+<body>
+
+    <div class="header sticky">
+        <span>Left-Sight</span>
+        <nav>
+            <a href="#">KI</a> 
+            <a href="#">Wissenschaft</a> 
+            <a href="#">Mathe & Physik</a> 
+            <a href="#">Suche</a> 
+            <a href="#">Startseite</a> 
+        </nav>
+    </div>
+    <div class="subnav sticky">Bildungsthemen</div>
+    
+    <script>
+        let lastScrollY = window.pageYOffset;
+        const header = document.querySelector('.header');
+        const subnav = document.querySelector('.subnav');
+    
+        window.addEventListener('scroll', () => {
+            const currentScrollY = window.pageYOffset;
+    
+            if (currentScrollY < lastScrollY) {
+                // Scrolling up
+                header.style.transform = 'translateY(0)';
+                subnav.style.transform = 'translateY(0)';
+            } else {
+                // Scrolling down
+                header.style.transform = 'translateY(-100%)';
+                subnav.style.transform = 'translateY(-100%)';
+            }
+    
+            lastScrollY = currentScrollY;
+        });
+    </script>
+    
+
+    <div class="video-section">
+        <!-- Image side with PNG -->
+        <div class="image-side">
+            <img src="db.1.png" alt="Related Content">
+        </div>
+
+        <!-- Video container -->
+        <div class="video-container">
+            <video src="dbvid.mp4" controls autoplay loop></video>
+        </div>
+    </div>
+
+    <div class="article-container">
+        <p class="date">18.01.2025, 21:03 Uhr</p>
+        <h1>Ada Language</h1>
+        <p class="intro">Die Rolle der Programmiersprache Ada in Raumfahrtunternehmen und der Wissenschaft</p>
+       
+       
+        </div>
+            
+
+    <div class="article-section">
+
+        <div class="author-badge">
+            <div class="profile-picture"></div>
+            <div class="author-name">Timo Radikalishcer</div>
+        </div>
+    
+        <p>
+            Programmiersprachen bilden das Fundament moderner Technologie, und eine Sprache, die oft übersehen wird, ist Ada. Obwohl sie nicht so weit verbreitet ist wie Python oder Java, spielt Ada eine entscheidende Rolle in Branchen wie der Luft- und Raumfahrt, der Verteidigung und der Wissenschaft. Aber was ist Ada, warum wurde sie entwickelt, und warum ist sie heute noch relevant? Lassen Sie uns ihre Ursprünge, Eigenschaften und ihren Einfluss auf Raumfahrtunternehmen und darüber hinaus erkunden.
+        </p>
+        <p class="Programmiersprache">
+            Was ist die Programmiersprache Ada?
+        </p>
+
+        <p>
+            Ada ist eine höhere, statisch typisierte Programmiersprache, die speziell für missionskritische Systeme entwickelt wurde, bei denen Sicherheit, Zuverlässigkeit und Präzision von größter Bedeutung sind. Sie wurde in den späten 1970er- und frühen 1980er-Jahren von einem Team unter der Leitung von Jean Ichbiah im Auftrag des US-Verteidigungsministeriums (DoD) entwickelt. Ziel war es, eine standardisierte Sprache für Verteidigungssysteme zu schaffen, um die damals über 450 eingesetzten Sprachen zu ersetzen.
+        </p>
+
+        <p class="entwickelt">
+            Warum wurde Ada entwickelt?
+        </p>
+
+        <p>
+            Ada wurde entwickelt, um die Herausforderungen bei der Entwicklung komplexer Echtzeitsysteme zu bewältigen. Die Hauptziele waren:
+
+Zuverlässigkeit: Fehlervermeidung und -erkennung, um die Systemsicherheit zu gewährleisten.
+Wartbarkeit: Eine einfachere Entwicklung und Aktualisierung groß angelegter Softwareprojekte.
+Nebenläufigkeit: Unterstützung für parallele und Echtzeitoperationen, die in der Luft- und Raumfahrt entscheidend sind.
+Standardisierung: Eine einheitliche Sprache zur Senkung der Entwicklungs- und Wartungskosten.
+Kurz gesagt: Ada wurde entwickelt, um Software für Systeme zu bauen, bei denen Menschenleben und enorme Investitionen von einer einwandfreien Funktion abhängen.
+        </p>
+
+        <p class="Sprachen">
+            Sprachen, die Ada ähnlich sind
+        </p>
+        <p class="konzeptionelle">
+            Ada weist konzeptionelle Ähnlichkeiten mit folgenden Sprachen auf:
+        </p><P>
+C/C++: Wird in performanzkritischen und hardwarenahen Systemen verwendet.
+Fortran: Traditionell in der wissenschaftlichen Berechnung und Luftfahrtsimulation eingesetzt.
+Rust: Eine moderne Sprache, die Sicherheit und Nebenläufigkeit betont, ähnlich wie Ada.
+Modula-2: Eine strukturierte Programmiersprache, die für systemnahe Software genutzt wird.
+
+        </p>
+       
+
+        <p class="verwenden">sollte man Ada verwenden?</p>           
+        <p class="Trotz">
+            Trotz ihrer Nischenanwendung wird Ada in bestimmten Bereichen aufgrund ihrer einzigartigen Vorteile eingesetzt:
+        </p>
+        
+        <div class="article-card">
+            <a href="https://www.spektrum.de/thema/raumfahrt/903767" class="article-hover-area">
+                <img src="db.2.png" alt="Totenkult in der Bronzezeit" class="article-image">
+                <div class="article-content">
+                    <p class="article-time">03.10.2024, 09:33 Uhr</p>
+                    <h2 class="article-title">Ja alle dinge nur passiert ist nicht richtig</h2>
+                    <p class="article-description">
+                       Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, repudiandae quaerat. Pariatur autem ipsam fugit doloremque facere error voluptates ratione, vero eaque incidunt nemo maiores, voluptatum corrupti, neque odit repellat!
+                    </p>
+                </div>
+            </a>
+        </div>
+        
+
+        
+        
+        <p>
+            Zuverlässigkeit und Sicherheit: Adas starke Typisierung, <a href="https://www.spektrum.de/thema/raumfahrt/903767" class="highlight-link">
+                Fehlerprüfung und Compiler-Sicherheitsmechanismen  </a>Fehlerprüfung und Compiler-Sicherheitsmechanismen reduzieren die Wahrscheinlichkeit von Fehlern.
+            Nebenläufigkeit: Eingebaute Konstrukte für Parallelität machen sie ideal für Echtzeitsysteme, wie z. B. die Navigation von Raumfahrzeugen.
+            Einhaltung von Sicherheitsstandards: Ada erleichtert die Einhaltung von Industriestandards wie DO-178C für die Luftfahrt und IEC 61508 für industrielle Sicherheit.
+            Langfristige Wartung: Adas Struktur erleichtert die Wartung groß angelegter Softwaresysteme über Jahrzehnte hinweg, was bei Raumfahrtmissionen entscheidend ist.
+            
+        </p>
+        <p class="eingesetzt"> wird Ada in Raumfahrtunternehmen eingesetzt?</p>
+        <p class="Bestandteil">
+            Ada ist ein wichtiger Bestandteil der Softwaresysteme in der  <a href="https://www.spektrum.de/thema/raumfahrt/903767" class="highlight-link">
+                Raumfahrt und Wissenschaft.  </a>  Hier sind einige Beispiele:
+        </p><p>
+NASA: Ada wurde im Space-Shuttle-Programm und in verschiedenen Satellitensystemen eingesetzt, da sie in risikoreichen Umgebungen zuverlässig ist.
+Europäische Weltraumorganisation (ESA): Die ESA setzt Ada für die Steuerung von Satelliten und andere missionskritische Operationen ein.
+Airbus Defence and Space: Verwendet Ada in Avionik- und Raumfahrtsystemen.
+Lockheed Martin und Raytheon: Nutzen Ada für verteidigungsbezogene Raumfahrtprojekte, einschließlich Raketen- und Radarsystemen.
+        </p>
+       <p class="heute">Wo wird Ada heute noch eingesetzt?</p> 
+        <p class="Obwohl">
+            Obwohl ihre Popularität im Vergleich zu den 1980er-Jahren zurückgegangen ist, ist Ada in Branchen, die auf hochzuverlässige Systeme angewiesen sind, nach wie vor unverzichtbar:
+        </p>
+        
+        <div class="author-badge">
+            <div class="profile-picture"></div>
+            <div class="author-name">Timo Radikalishcer</div>
+        </div>
+        <div class="news-card">
+            <video class="news-video" controls>
+                <source src="dbvid.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="news-content">
+                <p class="news-time">jetszt was</p>
+                <h2 class="news-title">Ja alle dinge nur passiert ist nicht richtig</h2>
+                <p class="news-description">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error consectetur, magni molestias illum impedit culpa recusandae consequatur sequi et fuga temporibus consequuntur iusto ullam deleniti quae id corrupti facilis est!
+                </p>
+            </div>
+    
+        </div>
+
+
+        <div class="article-card">
+            <a href="https://www.spektrum.de/thema/raumfahrt/903767" class="article-hover-area">
+                <img src="db.1.png" alt="Now what john dee?" class="article-image">
+                <div class="article-content">
+                    <p class="article-time">10.12.2025, 12:40 Uhr</p>
+                    <h2 class="article-title">Now what john dee? what gonna happen again??</h2>
+                    <p class="article-description">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, repellat eum? Repellat, molestiae dolorum. Esse, optio minima similique ducimus officia, commodi dolorum hic assumenda amet sit ex ullam quas fuga.
+                    </p>
+                </div>
+            </a>
+        </div>
+        
+
+            
+
+
+
+        <p>
+
+
+            <a href="https://www.spektrum.de/thema/raumfahrt/903767" class="highlight-link">
+                Verteidigung: </a> In Lenksystemen, Radarsystemen und Kommando- und Kontrollsoftware.
+Flugsicherung: Unternehmen wie die Thales Group setzen Ada in der globalen Flugsicherung ein.
+Industrielle Automatisierung: Verwendung in sicherheitskritischen Steuerungssystemen für Energie, Transport und Fertigung.
+Medizinische Geräte: Ada wird in Lebenserhaltungssystemen und bildgebenden Geräten eingesetzt, bei denen Präzision entscheidend ist.
+        </p>
+       <p class="Lohnt">Lohnt es sich, Ada 2025 zu lernen?</p> 
+
+       
+
+        <p class="lernen">
+            Gründe, Ada zu lernen:</p><p>
+            Hohe Nachfrage in Nischenbranchen: Wenn Sie in der Luft- und Raumfahrt, Verteidigung oder anderen sicherheitskritischen Bereichen arbeiten möchten, ist Ada-Know-how sehr gefragt.
+            Gutes Verständnis für kritische Systeme: Ada vermittelt Disziplin in der Entwicklung sicherer, wartbarer und nebenläufiger Software.
+            Wartung bestehender Systeme: Viele bestehende Systeme verwenden Ada und erfordern Fachkräfte zur Wartung oder Aktualisierung.
+            Gründe, sich auf andere Sprachen zu konzentrieren:
+            Wenn Ihre Interessen außerhalb sicherheitskritischer Systeme liegen, könnten Sie sich besser auf weiter verbreitete Sprachen konzentrieren:
+            
+            Python: Für Data Science, KI, Automatisierung und allgemeine Programmierung.
+            C++: Für performanzkritische Anwendungen, Spieleentwicklung und eingebettete Systeme.
+            Rust: Für moderne, speichersichere und nebenläufigkeitsorientierte Programmierung.
+            Java: Für Unternehmensanwendungen, Backendsysteme und Android-Entwicklung.
+            JavaScript: Für Webentwicklung und Full-Stack-Anwendungen.
+            Ada ist eine ausgezeichnete Wahl für Nischenbereiche, aber wenn Sie nach Vielseitigkeit und Jobmöglichkeiten in der breiteren Tech-Landschaft suchen, sind moderne Sprachen wie Python, Rust oder Java möglicherweise praktischer.
+        </p>
+
+       
+        
+
+        
+        <p class="Fazit">
+            Fazit
+        </p>
+
+        
+        <p>
+            Ada mag nicht so verbreitet sein wie andere Programmiersprachen, aber ihre Rolle in der Raumfahrt, Luft- und Raumfahrt und in sicherheitskritischen Systemen ist unbestreitbar. Ihre unvergleichliche Zuverlässigkeit, Sicherheitsmerkmale und Unterstützung für Nebenläufigkeit machen sie in Umgebungen unverzichtbar, in denen Fehler keine Option sind. Während es sich lohnt, Ada zu lernen, wenn Sie sich für die Luft- und Raumfahrt oder Verteidigung interessieren, könnten andere Sprachen wie Python oder Rust mehr Chancen in der heutigen Tech-Landschaft bieten.
+
+            Ada ist vielleicht nicht die auffälligste Sprache, aber in der Welt der Raketen, Satelliten und Raumfahrt bleibt sie ein stiller, aber wesentlicher Riese.
+        </p>
+
+
+        <div class="news-card">
+            <img src="db.2.png" alt="Joshua Kimmich" class="news-image">
+            <div class="news-content">
+                <p class="news-time">Was das ist bedeutung?</p>
+                <h2 class="news-title">Ja alle dinge nur passiert ist nicht richtig</h2>
+                <p class="news-description">
+                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat debitis in expedita velit error magni a sunt veniam inventore rerum? Amet exercitationem provident dolorum quis enim, sit possimus. Nulla, quibusdam?                </p>
+            </div>
+
+            
+        
+        </div>
+
+    </div>
+
+
+
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-links">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+                <a href="#" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+                <a href="#" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+                <a href="#" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
+                <a href="#" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="#" target="_blank"><i class="fab fa-youtube"></i> YouTube</a>
+            </div>
+        </div>
+        <div class="footer-column">
+            <h3>Contact Us</h3>
+            <p><i class="fas fa-envelope"></i> Email: <a href="mailto:support@leftsight.com">support@leftsight.com</a></p>
+            <p><i class="fas fa-phone-alt"></i> Phone: +Left-Sight team</p>
+        </div>
+        
+        <div class="footer-apps">
+            <h3>Download Our App</h3>
+            <a href="#" target="_blank"><i class="fab fa-google-play"></i> Google Play</a>
+            <a href="#" target="_blank"><i class="fab fa-apple"></i> App Store</a>
+        </div>
+        
+    </div>
+    
+    <div class="footer-contact">
+        <form class="subscribe-form" action="#" method="post" onsubmit="showThankYouMessage(event)">
+          <input type="email" id="email-input" name="email" placeholder="Enter your email" required>
+          <button type="submit">Subscribe</button>
+        </form>
+        <p id="thank-you-message" class="thank-you-message"></p>
+      </div>
+      <p class="copyright">&copy; 2025 Left-Sight All rights reserved.</p>
+      
+    
+</footer>
+
+
+<script src="ada.js"></script>
+</body>
+</html>

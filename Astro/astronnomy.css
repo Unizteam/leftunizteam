@@ -1,0 +1,157 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #060d17;
+    color: white;
+  }
+  
+  /* Header */
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #000000;
+    padding: 10px 30px;
+  }
+  
+  /* Navbar */
+  .navbar {
+    background-color: #0f1b2c;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 10px 0;
+    border-bottom: 2px solid #fedc00;
+  }
+  
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+  }
+  
+  .logo {
+    color: #fedc00;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  .nav-links li a:hover {
+    color: #fedc00;
+  }
+  
+  /* Image Header */
+  .image-header {
+    position: relative;
+  }
+  
+  .image-header img {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+  }
+  
+  .image-caption {
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+  }
+  
+  /* Article Section */
+  .article-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 20px;
+  }
+  
+  .date {
+    font-size: 0.9rem;
+    color: #aaa;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    color: #fedc00;
+    margin-bottom: 10px;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+    color: #fedc00;
+    margin-top: 20px;
+  }
+  
+  .author-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .author-name {
+    font-weight: bold;
+    color: #fedc00;
+  }
+  
+  .intro {
+    font-size: 1.1rem;
+    font-style: italic;
+    margin-bottom: 20px;
+  }
+  
+  
+/* Footer */
+footer {
+    background-color: #000000;
+    padding: 20px 0;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .footer-bottom {
+    background-color: #000000;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  footer input[type="email"] {
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  footer button {
+    background-color: #fedc00;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  footer button:hover {
+    background-color: #ffc107;
+  }
