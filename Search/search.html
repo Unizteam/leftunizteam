@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Left-Sight</title>
+    <link rel="stylesheet" href="search.css">
+</head>
+<body>
+
+
+
+    <div class="mobile-header">
+        <div class="logo">
+          <span>Left-Sight</span>
+        </div>
+        <div class="description">
+          <span>Seek for Science</span>
+        </div>
+        <div class="header-icons">
+          <a href="../Search/search.html" class="search-icon-link">
+            <i class="fas fa-search"></i>
+          </a>
+          <a href="../index.html" class="home-icon-link">
+            <i class="fas fa-home"></i>
+          </a>
+        </div>
+      </div>
+      
+    
+
+    
+      <div class="header sticky">
+        <span>Left-Sight</span>
+        <nav>
+            <a href="#">KI</a>
+            <a href="#">KI</a>
+            <a href="#">Wissenschaft</a>
+            <a href="#">Mathe & Physik</a>
+            <a href="../Search/search.html">Suche<i class="fa fa-search"></i></a>
+            <a href="../index.html">Home</a> <!-- Updated link -->
+        </nav>
+    </div>
+
+
+    <div class="subnav sticky">Wissenschaft</div>
+
+    <script>
+        let lastScrollY = window.pageYOffset;
+        const header = document.querySelector('.header');
+        const subnav = document.querySelector('.subnav');
+    
+        window.addEventListener('scroll', () => {
+            const currentScrollY = window.pageYOffset;
+    
+            if (currentScrollY < lastScrollY) {
+                // Scrolling up
+                header.style.transform = 'translateY(0)';
+                subnav.style.transform = 'translateY(0)';
+            } else {
+                // Scrolling down
+                header.style.transform = 'translateY(-100%)';
+                subnav.style.transform = 'translateY(-100%)';
+            }
+    
+            lastScrollY = currentScrollY;
+        });
+    </script>
+
+<div id="search-results"></div>
+
+<script>
+  const searchInput = document.getElementById('search-input'); // Make sure you have a search input field with this ID
+
+  // Fetch articles and enable search
+  fetch('content.json')
+    .then(response => response.json())
+    .then(articles => {
+      const resultsContainer = document.getElementById('search-results');
+
+      // Function to display results
+      function displayResults(results) {
+        resultsContainer.innerHTML = '';
+        results.forEach(article => {
+          resultsContainer.innerHTML += `
+            <div class="article-card">
+              <a href="${article.link}" class="article-hover-area">
+                <img src="${article.image}" alt="${article.title}" class="article-image">
+                <div class="article-content">
+                  <p class="article-time">${article.time}</p>
+                  <h2 class="article-title">${article.title}</h2>
+                  <p class="article-description">${article.description}</p>
+                </div>
+              </a>
+            </div>
+          `;
+        });
+      }
+
+      // Event listener for search input
+      searchInput.addEventListener('input', e => {
+        const query = e.target.value.toLowerCase();
+        const filtered = articles.filter(article =>
+          article.title.toLowerCase().includes(query) ||
+          article.description.toLowerCase().includes(query)
+        );
+        displayResults(filtered);
+      });
+
+      // Initially display all articles
+      displayResults(articles);
+    });
+</script>
+
+
+<body>
+    <header class="search-header">
+      <input id="search-input" type="text" placeholder="Suchbegriff eingeben">
+    </header>
+  
+    <main>
+      <div class="article-container">
+        <!-- Example articles -->
+        <div class="article-card">
+          <a href="../Aispacey/aispace.html" class="article-hover-area">
+            <img src="Images/aispace.jpg" alt="Article 1" class="article-image">
+            <div class="article-content">
+              <p class="article-time">10.12.2025, 12:40 Uhr</p>
+              <h2 class="article-title">Artificial Intelligence</h2>
+              <p class="article-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam quos quam adipisci. Aliquam provident odio recusandae facere porro optio, alias quis! Impedit natus facilis obcaecati voluptatibus laborum et asperiores soluta.</p>
+            </div>
+          </a>
+        </div>
+       
+        <div class="article-container">
+            <!-- Example articles -->
+            <div class="article-card">
+              <a href="../Aispacey/aispace.html" class="article-hover-area">
+                <img src="Images/aispace.jpg" alt="Article 1" class="article-image">
+                <div class="article-content">
+                  <p class="article-time">10.12.2025, 12:40 Uhr</p>
+                  <h2 class="article-title">Artificial Intelligence</h2>
+                  <p class="article-description">How Artificial Intelligence is Revolutionizing Space Exploration</p>
+                </div>
+              </a>
+            </div>
+         <div class="article-container">
+        <!-- Example articles -->
+        <div class="article-card">
+          <a href="../Aispacey/aispace.html" class="article-hover-area">
+            <img src="Images/aispace.jpg" alt="Article 1" class="article-image">
+            <div class="article-content">
+              <p class="article-time">10.12.2025, 12:40 Uhr</p>
+              <h2 class="article-title">Artificial Intelligence</h2>
+              <p class="article-description">How Artificial Intelligence is Revolutionizing Space Exploration</p>
+            </div>
+          </a>
+        </div>
+        <div class="article-container">
+            <!-- Example articles -->
+            <div class="article-card">
+              <a href="../Aispacey/aispace.html" class="article-hover-area">
+                <img src="Images/aispace.jpg" alt="Article 1" class="article-image">
+                <div class="article-content">
+                  <p class="article-time">10.12.2025, 12:40 Uhr</p>
+                  <h2 class="article-title">Artificial Intelligence</h2>
+                  <p class="article-description">How Artificial Intelligence is Revolutionizing Space Exploration</p>
+                </div>
+              </a>
+            </div>
+         <div class="article-container">
+        <!-- Example articles -->
+        <div class="article-card">
+          <a href="../Aispacey/aispace.html" class="article-hover-area">
+            <img src="Images/aispace.jpg" alt="Article 1" class="article-image">
+            <div class="article-content">
+              <p class="article-time">10.12.2025, 12:40 Uhr</p>
+              <h2 class="article-title">Artificial Intelligence</h2>
+              <p class="article-description">How Artificial Intelligence is Revolutionizing Space Exploration</p>
+            </div>
+          </a>
+        </div>
+        <div class="article-container">
+            <!-- Example articles -->
+            <div class="article-card">
+              <a href="../Aispacey/aispace.html" class="article-hover-area">
+                <img src="Images/aispace.jpg" alt="Article 1" class="article-image">
+                <div class="article-content">
+                  <p class="article-time">10.12.2025, 12:40 Uhr</p>
+                  <h2 class="article-title">Artificial Intelligence</h2>
+                  <p class="article-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam aspernatur beatae corporis impedit sunt animi nemo nesciunt voluptatum officiis possimus quos ad laborum voluptates dolores officia, facilis ducimus ab dolore.</p>
+                </div>
+              </a>
+            </div>
+          <div class="article-container">
+        <!-- Example articles -->
+        <div class="article-card">
+          <a href="../Aispacey/aispace.html" class="article-hover-area">
+            <img src="Images/aispace.jpg" alt="Article 1" class="article-image">
+            <div class="article-content">
+              <p class="article-time">10.12.2025, 12:40 Uhr</p>
+              <h2 class="article-title">Artificial Intelligence</h2>
+              <p class="article-description">How Artificial Intelligence is Revolutionizing Space Exploration</p>
+            </div>
+          </a>
+        </div>
+                  
+  <div class="article-container">
+        <!-- Example articles -->
+        <div class="article-card">
+          <a href="../Aispacey/aispace.html" class="article-hover-area">
+            <img src="Images/aispace.jpg" alt="Article 1" class="article-image">
+            <div class="article-content">
+              <p class="article-time">10.12.2025, 12:40 Uhr</p>
+              <h2 class="article-title">Artificial Intelligence</h2>
+              <p class="article-description">How Artificial Intelligence is Revolutionizing Space Exploration</p>
+            </div>
+          </a>
+        </div>
+        <div class="article-container">
+            <!-- Example articles -->
+            <div class="article-card">
+              <a href="../Aispacey/aispace.html" class="article-hover-area">
+                <img src="Images/aispace.jpg" alt="Article 1" class="article-image">
+                <div class="article-content">
+                  <p class="article-time">10.12.2025, 12:40 Uhr</p>
+                  <h2 class="article-title">Artificial Intelligence</h2>
+                  <p class="article-description">How Artificial Intelligence is Revolutionizing Space Exploration</p>
+                </div>
+              </a>
+            </div>
+                 
+     <div class="article-container">
+         <!-- Example articles -->
+          <div class="article-card">
+             <a href="../Aispacey/aispace.html" class="article-hover-area">
+               <img src="Images/aispace.jpg" alt="Article 1" class="article-image">
+              <div class="article-content">
+              <p class="article-time">10.12.2025, 12:40 Uhr</p>
+             <h2 class="article-title">Artificial Intelligence</h2>
+             <p class="article-description">How Artificial Intelligence is Revolutionizing Space Exploration</p>
+         </div>
+         </a>
+        </div>
+               
+      
+
+
+                <div class="article-container">
+                    <!-- Example articles -->
+                    <div class="article-card">
+                      <a href="../Aispacey/aispace.html" class="article-hover-area">
+                        <img src="Images/aispace.jpg" alt="Article 1" class="article-image">
+                        <div class="article-content">
+                          <p class="article-time">10.12.2025, 12:40 Uhr</p>
+                          <h2 class="article-title">Artificial Intelligence</h2>
+                          <p class="article-description">How Artificial Intelligence is Revolutionizing Space Exploration</p>
+                        </div>
+                      </a>
+                    </div>
+                                          
+                    
+
+
+
+  
+      <button id="load-more-button" class="load-more">Mehr Laden</button>
+    </main>
+  
+
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-links">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+                <a href="#" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+                <a href="#" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+                <a href="#" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
+                <a href="#" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="#" target="_blank"><i class="fab fa-youtube"></i> YouTube</a>
+            </div>
+        </div>
+        <div class="footer-column">
+            <h3>Contact Us</h3>
+            <p><i class="fas fa-envelope"></i> Email: <a href="mailto:support@leftsight.com">support@leftsight.com</a></p>
+            <p><i class="fas fa-phone-alt"></i> Phone: +Left-Sight team</p>
+        </div>
+        
+        <div class="footer-apps">
+            <h3>Download Our App</h3>
+            <a href="#" target="_blank"><i class="fab fa-google-play"></i> Google Play</a>
+            <a href="#" target="_blank"><i class="fab fa-apple"></i> App Store</a>
+        </div>
+        
+    </div>
+    
+    <div class="footer-contact">
+        <form class="subscribe-form" action="#" method="post" onsubmit="showThankYouMessage(event)">
+          <input type="email" id="email-input" name="email" placeholder="Enter your email" required>
+          <button type="submit">Subscribe</button>
+        </form>
+        <p id="thank-you-message" class="thank-you-message"></p>
+      </div>
+      <p class="copyright">&copy; 2025 Left-Sight All rights reserved.</p>
+      
+    
+</footer>
+
+
+<script src="search.js"></script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+[
+    {
+      "id": 1,
+      "image": "james1.png",
+      "title": "Now what john dee? what gonna happen again??",
+      "time": "10.12.2025, 12:40 Uhr",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt at nesciunt distinctio ad iusto?",
+      "link": "https://www.spektrum.de/thema/raumfahrt/903767"
+    },
+    {
+      "id": 2,
+      "image": "james2.png",
+      "title": "Another example content",
+      "time": "11.12.2025, 08:20 Uhr",
+      "description": "Some example description for another content.",
+      "link": "https://example.com"
+    }
+  ]
+  

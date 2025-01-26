@@ -20,6 +20,21 @@ body {
     transition: transform 0.3s ease-in-out; /* Smooth sliding effect */
     font-weight: bold; /* Make it bold */
   }
+
+  /* Styling for the search link with the icon */
+.search-link {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Adds space between the text and the icon */
+  }
+  
+  .search-link i {
+    font-size: 14px; /* Adjust icon size to match the text */
+    color: white; /* Matches the text color */
+  }
+
+  
+
   .header nav a {
     color: white;
     text-decoration: none;
@@ -48,8 +63,8 @@ body {
     z-index: 999;
     transform: translateY(0);
     transition: transform 0.3s ease-in-out;
-    backdrop-filter: blur(10px); /* Adds the blur effect */
-    -webkit-backdrop-filter: blur(10px); /* Ensures Safari support */
+    backdrop-filter: blur(50px); /* Adds the blur effect */
+    -webkit-backdrop-filter: blur(50px); /* Ensures Safari support */
   }
   
   body::before {
@@ -60,8 +75,8 @@ body {
     width: 100%;
     height: 40px; /* Adjust the height for the blur effect */
     z-index: 998; /* Behind the header and subnav */
-    backdrop-filter: blur(15px); /* Blur effect */
-    -webkit-backdrop-filter: blur(15px); /* Safari support */
+    backdrop-filter: blur(50px); /* Blur effect */
+    -webkit-backdrop-filter: blur(50px); /* Safari support */
   }
 
   
@@ -877,5 +892,33 @@ footer button {
       padding: 10px; /* Adds padding inside the container */
       border-radius: 8px; /* Optional: Adds rounded corners */
     }
+
+    /* Styling for the clickable search icon */
+.search-icon-link {
+    color: white; /* Matches the icon color */
+    text-decoration: none; /* Remove underline */
+  }
+  
+  .search-icon-link i {
+    font-size: 1.2rem; /* Ensure consistent icon size */
+  }
+  
+  .search-icon-link:hover {
+    color: #fedc00; /* Optional hover effect */
+  }
+  /* Styling for the clickable home icon */
+  .home-icon-link {
+    color: white; /* Matches the icon color */
+    text-decoration: none; /* Remove underline */
+  }
+  
+  .home-icon-link i {
+    font-size: 1.2rem; /* Ensure consistent icon size */
+  }
+  
+  .home-icon-link:hover {
+    color: #fedc00; /* Optional hover effect */
+  }
+  
   }
   

@@ -9,7 +9,6 @@
 </head>
 <body>
 
-
   <div class="mobile-header">
     <div class="logo">
       <span>Left-Sight</span>
@@ -18,23 +17,30 @@
       <span>Seek for Science</span>
     </div>
     <div class="header-icons">
-      <i class="fas fa-search"></i>
-      <i class="fas fa-bars"></i>
+      <a href="Search/search.html" class="search-icon-link">
+        <i class="fas fa-search"></i>
+      </a>
+      <a href="index.html" class="home-icon-link">
+        <i class="fas fa-home"></i>
+      </a>
     </div>
   </div>
+  
 
   
-  <!-- Header -->
   <div class="header sticky">
     <span>Left-Sight</span>
     <nav>
-      <a href="#">KI</a> 
-      <a href="#">Wissenschaft</a> 
-      <a href="#">Mathe & Physik</a> 
-      <a href="#">Suche</a> 
-      <a href="#">Startseite</a> 
+      <a href="#">KI</a>
+      <a href="#">Wissenschaft</a>
+      <a href="#">Mathe & Physik</a>
+      <a href="Search/search.html" class="search-link">
+        Suche <i class="fa fa-search"></i>
+      </a>
+      <a href="index.html">Home</a>
     </nav>
-</div>
+  </div>
+  
 <div class="subnav sticky">Bildungsthemen</div>
 
 <script>
@@ -58,6 +64,34 @@
         lastScrollY = currentScrollY;
     });
 </script>
+
+
+
+<div id="content-container"></div>
+
+<script>
+  // Fetch and render articles
+  fetch('content.json')
+    .then(response => response.json())
+    .then(articles => {
+      const container = document.getElementById('content-container');
+      articles.forEach(article => {
+        container.innerHTML += `
+          <div class="article-card">
+            <a href="${article.link}" class="article-hover-area">
+              <img src="${article.image}" alt="${article.title}" class="article-image">
+              <div class="article-content">
+                <p class="article-time">${article.time}</p>
+                <h2 class="article-title">${article.title}</h2>
+                <p class="article-description">${article.description}</p>
+              </div>
+            </a>
+          </div>
+        `;
+      });
+    });
+</script>
+
 
   <!-- Topics Section -->
   <section id="topics" class="topics">
