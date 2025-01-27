@@ -180,50 +180,57 @@
 
 
 
-
                 <div class="code-container">
                     <h2 class="section-title">1.1. Velocity Function</h2>
-                <div class="code-block">
-                    <div class="headers">
-                      <button id="copy-button" title="Copy code">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16">
-                          <path fill="currentColor" d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/>
-                        </svg>
-                      </button>
+                    <div class="code-block">
+                      <div class="headers">
+                        <button id="copy-button" title="Copy code">Copy code</button>
+                      </div>
+                      <pre id="code-block">
+                  <code>
+                  import math
+                  
+                  def escape_velocity(G, M, r):
+                      """
+                      Calculate the escape velocity.
+                      
+                      Parameters:
+                      G (float): Gravitational constant
+                      M (float): Mass of the celestial body
+                      r (float): Radius of the celestial body
+                      
+                      Returns:
+                      float: Escape velocity
+                      """
+                      return math.sqrt((2 * G * M) / r)
+                  
+                  # Example usage:
+                  G = 6.67430e-11  # Gravitational constant in m^3 kg^-1 s^-2
+                  M = 5.972e24     # Mass of Earth in kg
+                  r = 6371000      # Radius of Earth in meters
+                  
+                  v_escape = escape_velocity(G, M, r)
+                  print(f"Escape velocity: {v_escape:.2f} m/s")
+                  </code>
+                      </pre>
                     </div>
-                    <pre id="code-block">
-              <code>
-                import math
-
-                def escape_velocity(G, M, r):
-                    """
-                    Calculate the escape velocity.
-                    
-                    Parameters:
-                    G (float): Gravitational constant
-                    M (float): Mass of the celestial body
-                    r (float): Radius of the celestial body
-                    
-                    Returns:
-                    float: Escape velocity
-                    """
-                    return math.sqrt((2 * G * M) / r)
-                
-                # Example usage:
-                G = 6.67430e-11  # Gravitational constant in m^3 kg^-1 s^-2
-                M = 5.972e24     # Mass of Earth in kg
-                r = 6371000      # Radius of Earth in meters
-                
-                v_escape = escape_velocity(G, M, r)
-                print(f"Escape velocity: {v_escape:.2f} m/s")
-                
-              </code>
-                    </pre>
                   </div>
+                  
+                
+
+
+
+
+
+
+
+
+
+
 
                   <body>
                     <div class="chart-container">
-                      <div class="header">
+                      <div class="headers">
                         <button id="download-btn" class="icon-btn" title="Download">
                           <img src="download-icon.png" alt="Download" />
                           Download
@@ -239,9 +246,11 @@
                     </div>
                   
                     <div class="full-screen" id="full-screen-view">
+                      <div class="overlay" id="overlay"></div>
                       <button class="close-button" id="close-btn">&times;</button>
                       <img src="escape_velocity_formula.png.png" alt="Escape Velocity Formula">
                     </div>
+                  </body>
                   
              
 
@@ -329,6 +338,8 @@ Die Sterne sind nicht länger nur ein Traum – sie sind ein Ziel, angetrieben d
         
        
        
+       
+       
         
         <div class="author-badge">
             <div class="profile-picture"></div>
@@ -341,29 +352,55 @@ Die Sterne sind nicht länger nur ein Traum – sie sind ein Ziel, angetrieben d
             </video>
             <div class="news-content">
                 <p class="news-time">jetszt was</p>
-                <h2 class="news-title">Ja alle dinge nur passiert ist nicht richtig</h2>
+                <h2 class="news-title">Ada-Programmiersprache</h2>
                 <p class="news-description">
-                    Ja alle dinge nur passiert ist nicht richtig
+                  Die Rolle der Programmiersprache Ada in Raumfahrtunternehmen und der Wissenschaft...
                 </p>
             </div>
     
         </div>
-
+    
+      
 
         <div class="article-card">
-            <a href="https://left-sight.netlify.app/?page=1" class="article-hover-area">
-                <img src="db.1.png" alt="Now what john dee?" class="article-image">
+            <a href="https://left-sight.netlify.app/aispacey/aispace" class="article-hover-area">
+                <img src="../aispace.jpg" alt="Now what john dee?" class="article-image">
                 <div class="article-content">
-                    <p class="article-time">10.12.2025, 12:40 Uhr</p>
-                    <h2 class="article-title">Now what john dee? what gonna happen again??</h2>
+                    <p class="article-time">01.06.2025, 12:40 Uhr</p>
+                    <h2 class="article-title">Künstliche Intelligenz</h2>
                     <p class="article-description">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, repellat eum? Repellat, molestiae dolorum. Esse, optio minima similique ducimus officia, commodi dolorum hic assumenda amet sit ex ullam quas fuga.
+                      Wie Künstliche Intelligenz die Raumfahrt revolutioniert...
                     </p>
                 </div>
             </a>
         </div>
-        
 
+        <div class="article-card">
+          <a href="https://left-sight.netlify.app/aispacey/aispace" class="article-hover-area">
+              <img src="db.2.png" alt="Now what john dee?" class="article-image">
+              <div class="article-content">
+                  <p class="article-time">01.11.2025, 09:30 Uhr</p>
+                  <h2 class="article-title"> Ada-Programmiersprache</h2>
+                  <p class="article-description">
+                    Die Rolle der Programmiersprache Ada in Raumfahrtunternehmen und der Wissenschaft...
+                  </p>
+              </div>
+          </a>
+      </div>
+
+
+        <div class="article-card">
+          <a href="https://left-sight.netlify.app/aispacey/aispace" class="article-hover-area">
+              <img src="../aispace.jpg" alt="Now what john dee?" class="article-image">
+              <div class="article-content">
+                  <p class="article-time">01.06.2025, 12:40 Uhr</p>
+                  <h2 class="article-title">Künstliche Intelligenz</h2>
+                  <p class="article-description">
+                    Wie Künstliche Intelligenz die Raumfahrt revolutioniert...
+                  </p>
+              </div>
+          </a>
+      </div>
             
         
         </div>

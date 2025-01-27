@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Left-Sight</title>
+    <link rel="stylesheet" href="orbitalmechanics.css">
+</head>
+<body>
+
+    <div class="mobile-header">
+        <div class="logo">
+          <span>Left-Sight</span>
+        </div>
+        <div class="description">
+          <span>Seek for Science</span>
+        </div>
+        <div class="header-icons">
+          <a href="../Search/search.html" class="search-icon-link">
+            <i class="fas fa-search"></i>
+          </a>
+          <a href="../index.html" class="home-icon-link">
+            <i class="fas fa-home"></i>
+          </a>
+        </div>
+      </div>
+      
+    
+    <div class="header sticky">
+        <span>Left-Sight</span>
+        <nav>
+            <a href="#">KI</a>
+            <a href="#">Wissenschaft</a>
+            <a href="#">Mathe & Physik</a>
+            <a href="../Search/search.html">Suche <i class="fa fa-search"></i></a>
+            <a href="../index.html">Home</a> <!-- Updated link -->
+        </nav>
+    </div>
+
+
+    <div class="subnav sticky">Suche</div>
+
+    <script>
+        let lastScrollY = window.pageYOffset;
+        const header = document.querySelector('.header');
+        const subnav = document.querySelector('.subnav');
+    
+        window.addEventListener('scroll', () => {
+            const currentScrollY = window.pageYOffset;
+    
+            if (currentScrollY < lastScrollY) {
+                // Scrolling up
+                header.style.transform = 'translateY(0)';
+                subnav.style.transform = 'translateY(0)';
+            } else {
+                // Scrolling down
+                header.style.transform = 'translateY(-100%)';
+                subnav.style.transform = 'translateY(-100%)';
+            }
+    
+            lastScrollY = currentScrollY;
+        });
+    </script>
+    
+
+    <div class="video-section">
+        <!-- Image side with PNG -->
+        <div class="image-side">
+            <img src="cocacola.1.png" alt="Related Content">
+        </div>
+
+        <!-- Video container -->
+        <div class="video-container">
+            <video src="cocacola1.mp4" controls autoplay loop></video>
+        </div>
+    </div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    
+    
+
+    <div class="article-container">
+        <p class="date">18.01.2025, 21:03 Uhr</p>
+        <h1>Mathematik und Himmelsmechanik</h1>
+        <p class="intro">Die Mathematik der Himmelsmechanik</p>
+       
+       
+        </div>
+            
+
+    <div class="article-section">
+
+        <div class="author-badge">
+            <div class="profile-picture"></div>
+            <div class="author-name">Timo Radikalishcer</div>
+        </div>
+
+
+    
+        <p>
+            Die Himmelsmechanik, auch bekannt als Astrodynamik, beschäftigt sich mit der Bewegung von Himmelskörpern unter dem Einfluss von Gravitationskräften. Sie ist die Grundlage der Raumfahrt und ermöglicht es Wissenschaftlern und Ingenieuren, die Bahnen von Satelliten, Raumfahrzeugen und Planeten zu berechnen. Die Mathematik spielt dabei eine zentrale Rolle, denn sie liefert die Werkzeuge, um diese Bewegungen zu modellieren und vorherzusagen. Von den Keplerschen Gesetzen der Planetenbewegung bis zum Gravitationsgesetz von Newton zeigt die Himmelsmechanik, wie elegant und leistungsfähig mathematische Prinzipien sein können.
+        </p>
+
+
+
+        <p class="Programmiersprache">
+            1. Das Gesetz der Ellipsen
+        </p>
+        <p class="Programmiersprache">
+            Aussage:
+        </p>
+        <p>Die Bahn eines Planeten um die Sonne ist eine Ellipse, mit der Sonne in einem der beiden Brennpunkte.</p>
+
+<p class="Programmiersprache">
+    Anwendung:
+        </p>
+        <p>Dieses Gesetz hilft, die elliptischen Bahnen von Satelliten und Raumfahrzeugen um die Erde zu berechnen.</p>
+
+
+
+        <p class="Programmiersprache">
+            2. Das Gesetz der Flächen
+        </p>
+        <p class="Programmiersprache">
+            Aussage:
+        </p>
+        <p>Eine Linie, die einen Planeten mit der Sonne verbindet, überstreicht in gleichen Zeitintervallen gleiche Flächen.</p>
+
+        <p class="Programmiersprache">
+            Anwendung:
+                </p>
+                <p>Dieses Gesetz erklärt, warum Satelliten schneller sind, wenn sie sich dem zentralen Körper nähern (Perigäum), und langsamer, wenn sie sich entfernen (Apogäum).</p>
+        
+        
+
+
+                <p class="Programmiersprache">
+                    3. Das Gesetz der Harmonien
+                </p>
+                <p class="Programmiersprache">
+                    Aussage:
+                </p>
+                <p>Das Quadrat der Umlaufzeit eines Planeten ist proportional zur dritten Potenz der großen Halbachse seiner Bahn.</p>
+        
+                <p class="Programmiersprache">
+                    Mathematische Formulierung:
+                        </p>
+
+                      
+
+                      
+
+
+
+
+                        <body>
+                          <!-- Chart 1 -->
+                          <div class="chart-container">
+                            <div class="headers">
+                              <button class="enlarge-btn icon-btn" title="Expand Chart">
+                                <img src="expand-icon.png" alt="Expand" />
+                                Expand Chart
+                              </button>
+                            </div>
+                            <div class="chart">
+                              <img src="mathematical-formula.png" alt="Escape Velocity Formula" class="formula-img">
+                            </div>
+                            <div class="full-screen">
+                              <div class="overlay"></div>
+                              <button class="close-button">&times;</button>
+                              <img src="mathematical-formula.png" alt="Escape Velocity Formula">
+                            </div>
+                          </div>
+
+     
+
+                        <p>Dabei ist (T) die Umlaufzeit und (a) die große Halbachse.</p>
+                
+                
+                        <p class="Programmiersprache">
+                            Python-Beispiel:
+                                </p>
+
+ <!-- Code Container 1 -->
+ <div class="code-container">
+  <h2 class="section-title"></h2>
+  <div class="code-block">
+    <div class="headers">
+      <button class="copy-button" title="Copy code">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16">
+          <path fill="currentColor" d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0-2-.9-2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/>
+        </svg>
+      </button>
+    </div>
+    <pre class="code-block-content">
+      <code>
+        import math
+
+        def orbital_period(semi_major_axis, gravitational_constant, central_mass):
+            return 2 * math.pi * math.sqrt((semi_major_axis**3) / (gravitational_constant * central_mass))
+        
+        # Beispielwerte: Halbachse in Metern, Masse der Erde in kg
+        G = 6.67430e-11  # Gravitationskonstante
+        M = 5.972e24     # Masse der Erde
+        a = 7.0e6        # Halbachse (z. B. 7000 km Höhe)
+        
+        T = orbital_period(a, G, M)
+        print(f"Die Umlaufzeit beträgt {T / 60:.2f} Minuten")
+        
+        
+      </code>
+    </pre>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+        <p class="entwickelt">
+            Newtons Gravitationsgesetz
+        </p>
+
+        <p>Isaac Newton lieferte mit seinem Gravitationsgesetz die physikalische Grundlage für die Keplerschen Gesetze. Das Gesetz lautet:</p>
+
+
+      
+          
+
+
+        <body>
+          <!-- Chart 1 -->
+          <div class="chart-container">
+            <div class="headers">
+              <button class="enlarge-btn icon-btn" title="Expand Chart">
+                <img src="expand-icon.png" alt="Expand" />
+                Expand Chart
+              </button>
+            </div>
+            <div class="chart">
+              <img src="Gravitational Force.png" alt="Escape Velocity Formula" class="formula-img">
+            </div>
+            <div class="full-screen">
+              <div class="overlay"></div>
+              <button class="close-button">&times;</button>
+              <img src="Gravitational Force.png" alt="Escape Velocity Formula">
+            </div>
+          </div>
+
+
+
+
+
+
+          <p class="entwickelt">
+            Dabei gilt:
+        </p>
+
+       
+            <p class="entwickelt">F:</p> <p>KI-basierte Algorithmen verarbeiten Satellitenbilder, um Entwaldung zu überwachen, Wetterphänomene zu verfolgen und Naturkatastrophen vorherzusagen. Tools wie Convolutional Neural Networks (CNNs) können Landschaftsveränderungen über die Zeit mit erstaunlicher Präzision identifizieren.</p>
+            <p class="entwickelt">G: im Weltraum:</p><p>Die Identifizierung von Weltraumschrott und die Verfolgung von Asteroiden sind entscheidende Aufgaben für Raumfahrtagenturen. KI automatisiert die Erkennung und Klassifizierung von Objekten im Orbit und trägt so zur Sicherheit von Satelliten und zur planetaren Verteidigung bei.</p>
+            <p class="entwickelt">m1,m2:</p>  <p>Massen der Objekte.</p>
+            <p class="entwickelt">r:</p>  <p>Abstand zwischen den Objekten.</p>
+
+
+            <p class="entwickelt">Anwendungen:</p>
+
+
+            <p class="entwickelt">Orbitale Geschwindigkeit: </p>
+
+
+      
+
+            <body>
+              <!-- Chart 1 -->
+              <div class="chart-container">
+                <div class="headers">
+                  <button class="enlarge-btn icon-btn" title="Expand Chart">
+                    <img src="expand-icon.png" alt="Expand" />
+                    Expand Chart
+                  </button>
+                </div>
+                <div class="chart">
+                  <img src="Orbital Velocity.png" alt="Escape Velocity Formula" class="formula-img">
+                </div>
+                <div class="full-screen">
+                  <div class="overlay"></div>
+                  <button class="close-button">&times;</button>
+                  <img src="Orbital Velocity.png" alt="Escape Velocity Formula">
+                </div>
+              </div>
+    
+
+
+
+    
+            <p class="Programmiersprache">
+                Python-Beispiel:
+                    </p>
+
+
+
+
+
+  <!-- Code Container 1 -->
+  <div class="code-container">
+    <h2 class="section-title"></h2>
+    <div class="code-block">
+      <div class="headers">
+        <button class="copy-button" title="Copy code">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16">
+            <path fill="currentColor" d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0-2-.9-2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/>
+          </svg>
+        </button>
+      </div>
+      <pre class="code-block-content">
+        <code>
+          def orbital_velocity(gravitational_constant, central_mass, orbital_radius):
+          return math.sqrt(gravitational_constant * central_mass / orbital_radius)
+      
+      r = 7.0e6  # Umlaufbahn in Metern
+      v = orbital_velocity(G, M, r)
+      print(f"Die orbitale Geschwindigkeit beträgt {v / 1000:.2f} km/s")
+      
+        </code>
+      </pre>
+    </div>
+  </div>
+
+
+ 
+
+<p class="Programmiersprache">2. Fluchtgeschwindigkeit</p>
+
+
+
+      
+<body>
+  <!-- Chart 1 -->
+  <div class="chart-container">
+    <div class="headers">
+      <button class="enlarge-btn icon-btn" title="Expand Chart">
+        <img src="expand-icon.png" alt="Expand" />
+        Expand Chart
+      </button>
+    </div>
+    <div class="chart">
+      <img src="Escape Velocity.png" alt="Escape Velocity Formula" class="formula-img">
+    </div>
+    <div class="full-screen">
+      <div class="overlay"></div>
+      <button class="close-button">&times;</button>
+      <img src="Escape Velocity.png" alt="Escape Velocity Formula">
+    </div>
+  </div>
+
+
+
+
+
+    <p class="Programmiersprache">
+        Python-Beispiel:
+            </p>
+
+
+
+
+  <!-- Code Container 1 -->
+  <div class="code-container">
+    <h2 class="section-title"></h2>
+    <div class="code-block">
+      <div class="headers">
+        <button class="copy-button" title="Copy code">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16">
+            <path fill="currentColor" d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0-2-.9-2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/>
+          </svg>
+        </button>
+      </div>
+      <pre class="code-block-content">
+        <code>
+          def escape_velocity(gravitational_constant, central_mass, orbital_radius):
+          return math.sqrt(2 * gravitational_constant * central_mass / orbital_radius)
+      
+      v_escape = escape_velocity(G, M, r)
+      print(f"Die Fluchtgeschwindigkeit beträgt {v_escape / 1000:.2f} km/s")
+      
+        </code>
+      </pre>
+    </div>
+  </div>
+
+
+
+
+
+
+    <p class="Programmiersprache">Differentialgleichungen in orbitalen Bahnen</p>
+
+    <p>Die Bewegung von Satelliten wird durch Differentialgleichungen beschrieben, die aus Newtons Bewegungsgesetzen abgeleitet sind:</p>
+
+
+
+ 
+    <body>
+      <!-- Chart 1 -->
+      <div class="chart-container">
+        <div class="headers">
+          <button class="enlarge-btn icon-btn" title="Expand Chart">
+            <img src="expand-icon.png" alt="Expand" />
+            Expand Chart
+          </button>
+        </div>
+        <div class="chart">
+          <img src="Gravitational Acceleration.png" alt="Escape Velocity Formula" class="formula-img">
+        </div>
+        <div class="full-screen">
+          <div class="overlay"></div>
+          <button class="close-button">&times;</button>
+          <img src="Gravitational Acceleration.png" alt="Escape Velocity Formula">
+        </div>
+      </div>
+
+
+    <p>Mit Python und einer Bibliothek wie SciPy können diese Gleichungen numerisch gelöst werden. Ein Beispiel für die Berechnung einer elliptischen Bahn:</p>
+
+
+
+
+
+
+  <!-- Code Container 1 -->
+  <div class="code-container">
+    <h2 class="section-title"></h2>
+    <div class="code-block">
+      <div class="headers">
+        <button class="copy-button" title="Copy code">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16">
+            <path fill="currentColor" d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0-2-.9-2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/>
+          </svg>
+        </button>
+      </div>
+      <pre class="code-block-content">
+        <code>
+          import numpy as np
+from scipy.integrate import solve_ivp
+import matplotlib.pyplot as plt
+
+def orbital_dynamics(t, y, G, M):
+    x, y, vx, vy = y
+    r = np.sqrt(x**2 + y**2)
+    ax = -G * M * x / r**3
+    ay = -G * M * y / r**3
+    return [vx, vy, ax, ay]
+
+# Anfangsbedingungen
+y0 = [7.0e6, 0, 0, 7.8e3]  # Position (x, y) und Geschwindigkeit (vx, vy)
+t_span = (0, 6000)          # Simulationszeit in Sekunden
+t_eval = np.linspace(*t_span, 1000)
+
+solution = solve_ivp(orbital_dynamics, t_span, y0, args=(G, M), t_eval=t_eval)
+
+# Plot der Umlaufbahn
+plt.plot(solution.y[0], solution.y[1])
+plt.title("Elliptische Umlaufbahn")
+plt.xlabel("x (m)")
+plt.ylabel("y (m)")
+plt.axis("equal")
+plt.grid()
+plt.show()
+
+          
+        </code>
+      </pre>
+    </div>
+  </div>
+
+
+
+      <p class="Programmiersprache">
+        Die Bedeutung der Himmelsmechanik
+            </p>
+
+
+<p>Von Satellitentechnologie bis hin zu interplanetaren Missionen – die Himmelsmechanik ist essenziell für die moderne Wissenschaft und Technologie. Durch die Kombination von Mathematik, Physik und Programmierung können Ingenieure und Wissenschaftler nicht nur effizientere Missionen planen, sondern auch unser Verständnis des Universums erweitern.
+
+    Mit Python als Werkzeug lassen sich komplexe Probleme der Himmelsmechanik leicht simulieren, was diese Disziplin für Forschung und Bildung zugänglicher macht.</p>
+
+
+
+
+
+
+        
+
+
+  
+        
+        <div class="article-card">
+            <a href="https://left-sight.netlify.app/?page=1" class="article-hover-area">
+                <img src="db.2.png" alt="Totenkult in der Bronzezeit" class="article-image">
+                <div class="article-content">
+                    <p class="article-time">03.10.2024, 09:33 Uhr</p>
+                    <h2 class="article-title">Ja alle dinge nur passiert ist nicht richtig</h2>
+                    <p class="article-description">
+
+                        Ja alle dinge nur passiert ist nicht richtig
+                    </p>
+                </div>
+            </a>
+        </div>
+        
+
+        
+        
+        
+       
+       
+        
+        <div class="author-badge">
+            <div class="profile-picture"></div>
+            <div class="author-name">Timo Radikalishcer</div>
+        </div>
+        <div class="news-card">
+            <video class="news-video" controls>
+                <source src="dbvid.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="news-content">
+                <p class="news-time">jetszt was</p>
+                <h2 class="news-title">Ada-Programmiersprache</h2>
+                <p class="news-description">
+                  Die Rolle der Programmiersprache Ada in Raumfahrtunternehmen und der Wissenschaft...
+                </p>
+            </div>
+    
+        </div>
+    
+      
+
+        <div class="article-card">
+            <a href="https://left-sight.netlify.app/aispacey/aispace" class="article-hover-area">
+                <img src="../aispace.jpg" alt="Now what john dee?" class="article-image">
+                <div class="article-content">
+                    <p class="article-time">01.06.2025, 12:40 Uhr</p>
+                    <h2 class="article-title">Künstliche Intelligenz</h2>
+                    <p class="article-description">
+                      Wie Künstliche Intelligenz die Raumfahrt revolutioniert...
+                    </p>
+                </div>
+            </a>
+        </div>
+
+        <div class="article-card">
+          <a href="https://left-sight.netlify.app/aispacey/aispace" class="article-hover-area">
+              <img src="db.2.png" alt="Now what john dee?" class="article-image">
+              <div class="article-content">
+                  <p class="article-time">01.11.2025, 09:30 Uhr</p>
+                  <h2 class="article-title"> Ada-Programmiersprache</h2>
+                  <p class="article-description">
+                    Die Rolle der Programmiersprache Ada in Raumfahrtunternehmen und der Wissenschaft...
+                  </p>
+              </div>
+          </a>
+      </div>
+
+
+        <div class="article-card">
+          <a href="https://left-sight.netlify.app/aispacey/aispace" class="article-hover-area">
+              <img src="../aispace.jpg" alt="Now what john dee?" class="article-image">
+              <div class="article-content">
+                  <p class="article-time">01.06.2025, 12:40 Uhr</p>
+                  <h2 class="article-title">Künstliche Intelligenz</h2>
+                  <p class="article-description">
+                    Wie Künstliche Intelligenz die Raumfahrt revolutioniert...
+                  </p>
+              </div>
+          </a>
+      </div>
+
+            
+        
+        </div>
+
+    </div>
+
+
+
+
+
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-links">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+                <a href="#" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+                <a href="#" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+                <a href="#" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
+                <a href="#" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="#" target="_blank"><i class="fab fa-youtube"></i> YouTube</a>
+            </div>
+        </div>
+        <div class="footer-column">
+            <h3>Contact Us</h3>
+            <p><i class="fas fa-envelope"></i> Email: <a href="mailto:support@leftsight.com">support@leftsight.com</a></p>
+            <p><i class="fas fa-phone-alt"></i> Phone: +Left-Sight team</p>
+        </div>
+        
+        <div class="footer-apps">
+            <h3>Download Our App</h3>
+            <a href="#" target="_blank"><i class="fab fa-google-play"></i> Google Play</a>
+            <a href="#" target="_blank"><i class="fab fa-apple"></i> App Store</a>
+        </div>
+        
+    </div>
+    
+    <div class="footer-contact">
+        <form class="subscribe-form" action="#" method="post" onsubmit="showThankYouMessage(event)">
+          <input type="email" id="email-input" name="email" placeholder="Enter your email" required>
+          <button type="submit">Subscribe</button>
+        </form>
+        <p id="thank-you-message" class="thank-you-message"></p>
+      </div>
+      <p class="copyright">&copy; 2025 Left-Sight All rights reserved.</p>
+      
+    
+</footer>
+
+
+<script src="orbitalmechanics.js"></script>
+</body>
+</html>

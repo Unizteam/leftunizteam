@@ -920,8 +920,7 @@ footer button {
   
 
 
-
-.code-container {
+  .code-container {
     max-width: 800px;
     margin: 0 auto;
   }
@@ -951,6 +950,7 @@ footer button {
     border: none;
     color: #d4d4d4;
     cursor: pointer;
+    font-size: 14px;
   }
   
   #copy-button:hover {
@@ -971,103 +971,99 @@ footer button {
     color: #ffffff;
   }
   
-  .explanation {
-    margin-top: 20px;
-    list-style: none;
-    padding: 0;
-  }
-  
-  .explanation li {
-    margin-bottom: 10px;
-  }
-  
-  .explanation code {
-    background-color: #252526;
-    color: #c586c0;
-    padding: 2px 4px;
-    border-radius: 4px;
-  }
-
-
-
 
 /* Chart Container */
 .chart-container {
-    margin: 20px auto;
-    max-width: 400px; /* Smaller width for the chart */
-    background-color: #2d2d2d;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    padding: 10px;
-  }
-  
-  /* Header for Buttons */
-  .headers {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #1e1e1e;
-    padding: 5px 10px;
-    border-bottom: 1px solid #3c3c3c;
-  }
-  
-  .icon-btn {
-    background: none;
-    border: none;
-    color: #d4d4d4;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    font-size: 14px;
-    gap: 5px;
-  }
-  
-  .icon-btn img {
-    width: 16px;
-    height: 16px;
-  }
-  
-  .icon-btn:hover {
-    color: #007acc;
-  }
-  
-  /* Chart Display */
-  .chart img {
-    width: 100%; /* Responsive image */
-    border-radius: 8px;
-  }
-  
-  /* Full-Screen View */
-  .full-screen {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.8);
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .full-screen img {
-    max-width: 90%;
-    max-height: 90%;
-  }
-  
-  .close-button {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    background-color: red;
-    border: none;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    color: white;
-    font-size: 20px;
-    cursor: pointer;
-  }
+  margin: 20px auto;
+  max-width: 400px;
+  background-color: #2d2d2d;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  padding: 10px;
+}
+
+/* Header for Buttons */
+.headers {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1e1e1e;
+  padding: 5px 10px;
+  border-bottom: 1px solid #3c3c3c;
+}
+
+.icon-btn {
+  background: none;
+  border: none;
+  color: #d4d4d4;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 14px;
+  gap: 5px;
+}
+
+.icon-btn img {
+  width: 16px;
+  height: 16px;
+}
+
+.icon-btn:hover {
+  color: #007acc;
+}
+
+/* Chart Display */
+.chart img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* Full-Screen View */
+.full-screen {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.full-screen img {
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.close-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: red;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.close-button:hover {
+  background-color: darkred;
+}
+
+/* Overlay to detect outside clicks */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
 
 
 
