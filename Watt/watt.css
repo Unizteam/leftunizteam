@@ -17,15 +17,13 @@ body {
     top: 0;
     z-index: 1000;
     transform: translateY(0);
-    transition: transform 0.3s ease-in-out; /* Smooth sliding effect */
-    font-weight: bold; /* Make it bold */
-}
-
-
-
-
-/* Styling for the search link with the icon */
-.search-link {
+    transition: transform 0.3s ease-in-out;
+    font-weight: bold;
+  }
+  
+  
+  /* Styling for the search link with the icon */
+  .search-link {
     display: flex;
     align-items: center;
     gap: 5px; /* Adds space between the text and the icon */
@@ -35,51 +33,63 @@ body {
     font-size: 14px; /* Adjust icon size to match the text */
     color: white; /* Matches the text color */
   }
-
   
-.header nav a {
+  
+  .header nav a {
     color: white;
     text-decoration: none;
     margin-right: 10px;
-}
-
-.header nav {
+  }
+  
+  .header nav {
     display: flex;
     gap: 15px;
-}
-
-.header a {
+  }
+  
+  .header a {
     color: white;
     text-decoration: none;
     font-size: 14px;
-}
-
-
-.subnav {
+  }
+  
+  
+  /* Subnav - Fixed to Prevent Empty Space */
+  .subnav {
     background: #fedc00;
     padding: 5px 20px;
     color: #000000;
     font-weight: bold;
     position: sticky;
-    top: 40px; /* Keeps it below the header */
+    top: 40px;
     z-index: 999;
     transform: translateY(0);
     transition: transform 0.3s ease-in-out;
-    backdrop-filter: blur(50px); /* Adds the blur effect */
-    -webkit-backdrop-filter: blur(50px); /* Ensures Safari support */
+    backdrop-filter: blur(50px);
+    -webkit-backdrop-filter: blur(50px);
   }
   
+  
+  /* FIX: Prevent Empty Space Above Subnav */
   body::before {
     content: "";
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 40px; /* Adjust the height for the blur effect */
-    z-index: 998; /* Behind the header and subnav */
-    backdrop-filter: blur(50px); /* Blur effect */
-    -webkit-backdrop-filter: blur(50px); /* Safari support */
+    height: 40px; /* Covers the space */
+    background: black; /* Fills the gap with black */
+    z-index: 998; /* Behind header & subnav */
   }
+
+  
+
+
+
+
+
+
+
+  
   
 .author-badge {
     max-width: 700px;
@@ -123,6 +133,15 @@ body {
 }
 
 
+
+
+
+
+
+
+
+
+
 /* Video Section */
 .video-section {
     display: flex;
@@ -144,20 +163,104 @@ body {
     object-fit: cover; /* Ensure the image scales properly */
 }
 
-/* Video container */
-.video-container {
+
+
+
+
+
+
+
+
+
+
+
+/* Video Section */
+.video-section {
+    display: flex;
+    height: calc(50vh); /* Set a fixed height */
+  }
+  
+  .image-side {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #002850; /* Background color for fallback */
+    height: 100%; /* Match height with video section */
+  }
+  
+  .image-side a {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+  
+  .image-side img {
+    width: 100%; /* Fill the container width */
+    height: 100%; /* Fill the container height */
+    object-fit: cover; /* Ensure the image scales properly */
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  /* Video container */
+  .video-container {
     flex: 3;
+    position: relative; /* Make sure mute button stays inside */
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%; /* Match height with image side */
-}
-
-.video-container video {
+  }
+  
+  .video-container video {
     width: 100%;
     height: 100%;
     object-fit: cover;
-}
+  }
+  
+  /* Mute Button */
+  .mute-btn {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: #080911;
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 8px 12px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .mute-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: rgb(7, 5, 5);
+  }
+  
+  
+
+
+
+
+
+
+
+
+
 
 /* Article Section */
 .article-section {
@@ -168,6 +271,10 @@ body {
     margin-bottom: 50px;
     font-size: 1.2rem;
 }
+
+
+
+
 
 /* Center the PDF link */
 .pdf-link {
