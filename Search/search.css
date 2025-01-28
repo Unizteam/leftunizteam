@@ -3,7 +3,7 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color:#080911;
+    background-color:#000000;
     color: white;
 }
 
@@ -224,7 +224,7 @@ body {
 
 /* Footer */
 footer {
-    background-color: #000000;
+    background-color: #080911;
     padding: 20px;
 }
 
@@ -322,29 +322,29 @@ footer button {
 
 
 
-/* Footer Contact Section */
+
 .footer-contact {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center content */
-    gap: 10px; /* Space between email, phone, and subscribe form */
-    margin-bottom: 20px; /* Add space before copyright */
+    align-items: center; 
+    gap: 10px;
+    margin-bottom: 20px;
 }
 
-/* Subscribe Form */
+
 .subscribe-form {
     display: flex;
-    gap: 0; /* No gap between input and button */
+    gap: 0; 
     align-items: center;
-    margin-top: 0; /* Remove extra margin */
+    margin-top: 0; 
 }
 
 .subscribe-form input[type="email"] {
     padding: 8px;
     border: 1px solid #ccc;
-    border-radius: 4px 0 0 4px; /* Round left corners only */
+    border-radius: 4px 0 0 4px; 
     width: 250px;
-    margin: 0; /* Remove extra margin */
+    margin: 0; 
 }
 
 .subscribe-form button {
@@ -352,10 +352,10 @@ footer button {
     background-color: #e0c205;
     color: #000;
     border: none;
-    border-radius: 0 4px 4px 0; /* Round right corners only */
+    border-radius: 0 4px 4px 0;
     cursor: pointer;
     font-size: 14px;
-    margin: 0; /* Remove extra margin */
+    margin: 0; 
 }
 
 .subscribe-form button:hover {
@@ -367,16 +367,16 @@ footer button {
     text-align: center;
     font-size: 0.9rem;
     color: white;
-    margin-top: 20px; /* Add slight space */
+    margin-top: 20px; 
 }
 
 
 /* Thank You Message */
 .thank-you-message {
-    color: green; /* Green text for success */
+    color: green;
     font-size: 1rem;
     margin-top: 10px;
-    display: none; /* Hidden by default */
+    display: none; 
 }
 
 
@@ -500,18 +500,18 @@ footer button {
 .news-cards {
     display: flex;
     max-width: 700px;
-    margin: 20px auto; /* Centers the card */
+    margin: 20px auto; 
     border-radius: 10px;
-    overflow: hidden; /* Ensures the image fits within the card */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow for better aesthetics */
+    overflow: hidden; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
     color: white;
 }
 .news-image {
-    width: 100%; /* Use the full width of its container */
-    height: auto; /* Keep the aspect ratio */
-    max-width: 250px; /* Optional: Limit the maximum width */
-    object-fit: cover; /* Ensures the image fills its space nicely */
-    border-radius: 5px; /* Optional: Add rounded corners */
+    width: 100%; 
+    height: auto; 
+    max-width: 250px;
+    object-fit: cover;
+    border-radius: 5px; 
 }
 
 
@@ -523,8 +523,8 @@ footer button {
 }
 
 .news-times {
-    color: #aaa; /* Light gray for time text */
-    font-size: 0.85em; /* Slightly smaller font */
+    color: #aaa;
+    font-size: 0.85em;
     margin-bottom: 5px;
 }
 
@@ -537,7 +537,7 @@ footer button {
 
 .news-descriptions {
     font-size: 0.95em;
-    color: #ddd; /* Light gray for description text */
+    color: #ddd; 
     line-height: 1.5;
 }
 
@@ -551,23 +551,22 @@ footer button {
 .news-card {
     display: flex;
     max-width: 700px;
-    margin: 20px auto; /* Centers the card */
+    margin: 20px auto; 
     border-radius: 10px;
-    overflow: hidden; /* Ensures the image fits within the card */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow for better aesthetics */
-    color: white;
+    overflow: hidden; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .news-image {
-    width: 40%; /* Adjust image width */
-    height: auto; /* Keeps image aspect ratio */
-    object-fit: cover; /* Ensures the image covers the space nicely */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+    width: 40%; 
+    height: auto; 
+    object-fit: cover; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
 }
 
 .news-image:hover {
-    transform: scale(1.05); /* Slight zoom effect */
-    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.4); /* Adds shine effect */
+    transform: scale(1.05); 
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.4); 
 }
 
 .news-content {
@@ -578,8 +577,8 @@ footer button {
 }
 
 .news-time {
-    color: #aaa; /* Light gray for time text */
-    font-size: 0.85em; /* Slightly smaller font */
+    color: #aaa;
+    font-size: 0.85em; 
     margin-bottom: 5px;
 }
 
@@ -591,19 +590,19 @@ footer button {
 }
 
 .news-title-link {
-    text-decoration: none; /* Removes underline by default */
-    color: white; /* Default text color */
-    transition: color 0.3s ease, text-decoration 0.3s ease; /* Smooth hover effect */
+    text-decoration: none; 
+    color: white; 
+    transition: color 0.3s ease, text-decoration 0.3s ease; 
 }
 
 .news-title-link:hover {
-    color: #fedc00; /* Changes color on hover */
-    text-decoration: underline; /* Adds underline on hover */
+    color: #fedc00; 
+    text-decoration: underline; 
 }
 
 .news-description {
     font-size: 0.95em;
-    color: #ddd; /* Light gray for description text */
+    color: #ddd; 
     line-height: 1.5;
 }
 
@@ -612,18 +611,18 @@ footer button {
 .news-card {
     display: flex;
     max-width: 700px;
-    margin: 20px auto; /* Centers the card */
+    margin: 20px auto;
     border-radius: 10px;
-    overflow: hidden; /* Ensures the video fits within the card */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow for better aesthetics */
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
     color: white;
 }
 
 .news-video {
-    width: 40%; /* Adjust video width */
-    height: auto; /* Keeps video aspect ratio */
-    object-fit: cover; /* Ensures the video fits nicely */
-    background-color: black; /* Fallback color if the video doesn't load */
+    width: 40%; 
+    height: auto; 
+    object-fit: cover; 
+    background-color: black;
 }
 
 .news-content {
@@ -634,8 +633,8 @@ footer button {
 }
 
 .news-time {
-    color: #aaa; /* Light gray for time text */
-    font-size: 0.85em; /* Slightly smaller font */
+    color: #aaa;
+    font-size: 0.85em; 
     margin-bottom: 5px;
 }
 
@@ -648,23 +647,23 @@ footer button {
 
 .news-description {
     font-size: 0.95em;
-    color: #ddd; /* Light gray for description text */
+    color: #ddd; 
     line-height: 1.5;
 }
 
 
 .highlight-link {
-    text-decoration: underline; /* Underline the text */
-    color: white; /* Default color */
-    transition: color 0.3s ease; /* Smooth color change on hover/click */
+    text-decoration: underline; 
+    color: white; 
+    transition: color 0.3s ease;
 }
 
 .highlight-link:hover {
-    color: #fedc00; /* Change color on hover */
+    color: #fedc00; 
 }
 
 .highlight-link:active {
-    color: #fedc00; /* Ensure the color remains on click */
+    color: #fedc00; 
 }
 
 
@@ -673,50 +672,50 @@ footer button {
 
 
 
-/* Container for the card */
+
 .article-card {
     display: flex;
     max-width: 700px;
     margin: 20px auto;
-    border-radius: 10px; /* Smooth edges */
-    overflow: hidden; /* Keeps the content tidy */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
-    color: white; /* Default text color */
-    position: relative; /* For hover effects */
+    border-radius: 10px; 
+    overflow: hidden; 
+    box-shadow: 0 4px 8px #080911;; 
+    color: white; 
+    position: relative; 
 }
 
-/* Entire hoverable area */
+
 .article-hover-area {
     display: flex;
-    text-decoration: none; /* Remove underline on default */
-    color: white; /* Default color */
+    text-decoration: none; 
+    color: white; 
     width: 100%;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Hover effects for the entire area */
+
 .article-hover-area:hover .article-image {
-    transform: scale(1.02); /* Slight zoom */
-    box-shadow: 0 8px 20px rgba(27, 90, 106, 0.4); /* Adds a shine effect */
+    transform: scale(1.02);
+    box-shadow: 0 8px 20px rgba(27, 90, 106, 0.4); 
 }
 
 
 .article-hover-area:hover .article-title {
-    text-decoration: underline; /* Adds underline on hover */
-    color: #fedc00; /* Changes text color to yellow */
+    text-decoration: underline; 
+    color: #fedc00; 
 }
 
 
-/* Image styling */
+
 .article-image {
-    width: 40%; /* Adjust image width */
-    height: auto; /* Keeps image aspect ratio */
-    object-fit: cover; /* Ensures the image covers its space nicely */
-    border-radius: 5px; /* Optional rounded corners */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+    width: 40%; 
+    height: auto; 
+    object-fit: cover; 
+    border-radius: 5px; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
 }
 
-/* Right-side content */
+
 .article-content {
     padding: 15px;
     display: flex;
@@ -724,27 +723,26 @@ footer button {
     justify-content: space-between;
 }
 
-/* Date styling */
+
 .article-time {
-    color: #aaa; /* Light gray for time */
-    font-size: 0.85em; /* Slightly smaller text */
+    color: #aaa; 
+    font-size: 0.85em; 
     margin-bottom: 10px;
-    transition: color 0.3s ease; /* Smooth color change */
+    transition: color 0.3s ease; 
 }
 
-/* Title styling */
+
 .article-title {
     font-size: 1.2em;
     font-weight: bold;
     margin: 5px 0;
     line-height: 1.4;
-    transition: color 0.3s ease; /* Smooth color change */
+    transition: color 0.3s ease; 
 }
 
-/* Description text */
 .article-description {
     font-size: 0.95em;
-    color: #ddd; /* Light gray for description */
+    color: #ddd; 
     line-height: 1.5;
 }
 
@@ -755,47 +753,47 @@ footer button {
   }
   
   
-  /* Mobile-specific Header Design */
+
   @media (max-width: 768px) {
   
   
   
-    /* Prevent horizontal scrolling */
+  
     body {
       margin: 0;
       padding: 0;
-      overflow-x: hidden; /* Disable horizontal scrolling */
+      overflow-x: hidden; 
     }
   
-    /* Center the topics section */
+   
     .topics {
-      max-width: 100%; /* Ensure the content fits within the viewport */
-      margin: 0 auto; /* Center the content */
-      padding: 10px; /* Add padding for spacing */
-      box-sizing: border-box; /* Include padding/border in width */
+      max-width: 100%; 
+      margin: 0 auto; 
+      padding: 10px;
+      box-sizing: border-box; 
     }
   
-    /* Adjust the topic cards container */
+
     .topic-cards {
       display: flex;
-      flex-direction: column; /* Stack cards vertically */
-      gap: 15px; /* Space between cards */
-      padding: 0; /* Remove unnecessary padding */
-      width: 100%; /* Ensure cards fit within the viewport */
+      flex-direction: column; 
+      gap: 15px; 
+      padding: 0; 
+      width: 100%; 
     }
   
-    /* Style individual cards */
+ 
     .card {
-      width: 90%; /* Limit card width to 90% for better spacing */
-      margin: 0 auto; /* Center the card */
-      box-sizing: border-box; /* Include padding/border in width */
-      text-align: center; /* Center-align text inside the card */
+      width: 90%; 
+      margin: 0 auto;
+      box-sizing: border-box; 
+      text-align: center; 
     }
   
-    /* Make images inside cards responsive */
+    
     .card img {
-      width: 100%; /* Make the image fit the card width */
-      height: auto; /* Maintain aspect ratio */
+      width: 100%;
+      height: auto; 
     }
   
   
@@ -807,93 +805,92 @@ footer button {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background-color: #000000;/* Dark blue */
+      background-color: #000000;
       color: white;
       padding: 15px 20px;
       position: sticky;
-      top: 0; /* Stick to the top */
-      z-index: 1000; /* Ensure it stays above other elements */
-      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Optional shadow */
+      top: 0; 
+      z-index: 1000;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); 
     }
   
-    /* Logo Section */
+   
     .mobile-header .logo {
-      font-size: 1.2rem; /* Slightly larger text for the name */
-      font-weight: bold; /* Emphasize the name */
+      font-size: 1.2rem; 
+      font-weight: bold; 
     }
-  
-    /* Description Section */
+ 
     .mobile-header .description {
-      font-size: 0.9rem; /* Smaller text for tagline */
-      font-style: italic; /* Make it stand out */
+      font-size: 0.9rem; 
+      font-style: italic; 
     }
   
-    /* Header Icons */
+  
     .mobile-header .header-icons {
       display: flex;
-      gap: 15px; /* Space between icons */
+      gap: 15px; 
     }
   
     .mobile-header .header-icons i {
-      font-size: 1.2rem; /* Size of icons */
-      cursor: pointer; /* Change cursor on hover */
+      font-size: 1.2rem; 
+      cursor: pointer; 
     }
   
     .mobile-header .header-icons i:hover {
-      color: #080911; /* Change color on hover */
+      color: #080911; 
     }
   
-    /* Hide this header for larger screens */
+    
     .mobile-header {
       display: flex;
     }
   
-    /* Hide PC header on mobile */
+   
     .header {
       display: none;
     }
   
   
   .footer-content {
-  flex-direction: column; /* Stack columns vertically */
-  text-align: center; /* Center-align content */
-  gap: 20px; /* Add spacing between sections */
+  flex-direction: column; 
+  text-align: center; 
+  gap: 20px; 
   }
   
   .footer-links, .footer-column, .footer-apps {
-  flex: 1 1 auto; /* Adjust width for stacking */
-  margin-bottom: 20px; /* Add spacing between sections */
+  flex: 1 1 auto; 
+  margin-bottom: 20px; 
   }
   
   .subscribe-form {
-  flex-direction: column; /* Stack input and button */
-  gap: 10px; /* Space between input and button */
-  align-items: center; /* Center the form */
+  flex-direction: column; 
+  gap: 10px; 
+  align-items: center; 
   }
   
   .subscribe-form input[type="email"] {
-  width: 100%; /* Full width input on mobile */
+  width: 100%; 
   }
   
   .subscribe-form button {
-  width: 100%; /* Full width button on mobile */
+  width: 100%; 
   }
   }
   
   @media (max-width: 768px) {
     .article-section {
-      margin: 0 15px; /* Adds 15px margin on left and right */
-      padding: 10px; /* Adds padding inside the container */
-      border-radius: 8px; /* Optional: Adds rounded corners */
+      margin: 0 15px;
+      padding: 10px; 
+      border-radius: 8px; 
     }
-    /* Styling for the clickable search icon */
+   
 .search-icon-link {
-    color: white; /* Matches the icon color */
-    text-decoration: none; /* Remove underline */
+    color: white; 
+    text-decoration: none; 
   }
   
   .search-icon-link i {
-    font-size: 1.2rem; /* Ensure consistent icon size */
+    font-size: 1.2rem; 
   }
   
   .search-icon-link:hover {
@@ -1084,9 +1081,6 @@ footer button {
 }
 
 
-
-
-/* Articles */
 .article-container {
     padding: 0px;
     margin: 10px auto;
@@ -1136,7 +1130,7 @@ footer button {
     color: #aaa;
 }
 
-/* Back to Previous Button (Optional) */
+
 .load-more {
     background-color: #fedc00;
     color: #000;
@@ -1146,7 +1140,7 @@ footer button {
     border-radius: 5px;
     cursor: pointer;
     font-size: 1rem;
-    display: block; /* Default display */
+    display: block; 
     text-align: center;
 }
 

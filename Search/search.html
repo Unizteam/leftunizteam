@@ -39,11 +39,10 @@
         <span>Left-Sight</span>
         <nav>
             <a href="#">KI</a>
-            <a href="#">KI</a>
             <a href="#">Wissenschaft</a>
             <a href="#">Mathe & Physik</a>
             <a href="../Search/search.html">Suche<i class="fa fa-search"></i></a>
-            <a href="../index.html">Home</a> <!-- Updated link -->
+            <a href="../index.html">Home<i class="fa fa-home"></i></a> 
         </nav>
     </div>
 
@@ -59,11 +58,11 @@
             const currentScrollY = window.pageYOffset;
     
             if (currentScrollY < lastScrollY) {
-                // Scrolling up
+              
                 header.style.transform = 'translateY(0)';
                 subnav.style.transform = 'translateY(0)';
             } else {
-                // Scrolling down
+               
                 header.style.transform = 'translateY(-100%)';
                 subnav.style.transform = 'translateY(-100%)';
             }
@@ -77,13 +76,12 @@
 <script>
   const searchInput = document.getElementById('search-input'); // Make sure you have a search input field with this ID
 
-  // Fetch articles and enable search
   fetch('content.json')
     .then(response => response.json())
     .then(articles => {
       const resultsContainer = document.getElementById('search-results');
 
-      // Function to display results
+      
       function displayResults(results) {
         resultsContainer.innerHTML = '';
         results.forEach(article => {
@@ -102,7 +100,7 @@
         });
       }
 
-      // Event listener for search input
+   
       searchInput.addEventListener('input', e => {
         const query = e.target.value.toLowerCase();
         const filtered = articles.filter(article =>
@@ -112,7 +110,7 @@
         displayResults(filtered);
       });
 
-      // Initially display all articles
+      
       displayResults(articles);
     });
 </script>
@@ -125,146 +123,48 @@
   
     <main>
       <div class="article-container">
-        <!-- Example articles -->
+
+
+
+        <!-- articles -->
         <div class="article-card">
           <a href="../Aispacey/aispace.html" class="article-hover-area">
             <img src="Images/aispace.jpg" alt="Article 1" class="article-image">
             <div class="article-content">
               <p class="article-time">10.12.2025, 12:40 Uhr</p>
               <h2 class="article-title">Artificial Intelligence</h2>
-              <p class="article-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam quos quam adipisci. Aliquam provident odio recusandae facere porro optio, alias quis! Impedit natus facilis obcaecati voluptatibus laborum et asperiores soluta.</p>
+              <p class="article-description">Wie Künstliche Intelligenz die Raumfahrt revolutioniert.</p>
             </div>
           </a>
         </div>
-       
-        <div class="article-container">
-            <!-- Example articles -->
+
+
+
+           
             <div class="article-card">
-              <a href="../Aispacey/aispace.html" class="article-hover-area">
-                <img src="Images/aispace.jpg" alt="Article 1" class="article-image">
+              <a href="../Ada/ada.html" class="article-hover-area">
+                <img src="../images/adaschprache.png" alt="Article 1" class="article-image">
                 <div class="article-content">
-                  <p class="article-time">10.12.2025, 12:40 Uhr</p>
-                  <h2 class="article-title">Artificial Intelligence</h2>
-                  <p class="article-description">How Artificial Intelligence is Revolutionizing Space Exploration</p>
+                  <p class="article-time">17.12.2025, 14:30 Uhr</p>
+                  <h2 class="article-title">Ada-Programmiersprache</h2>
+                  <p class="article-description">Die Rolle der Programmiersprache Ada in Raumfahrtunternehmen und der Wissenschaft</p>
                 </div>
               </a>
             </div>
          <div class="article-container">
-        <!-- Example articles -->
+     
         <div class="article-card">
-          <a href="../Aispacey/aispace.html" class="article-hover-area">
-            <img src="Images/aispace.jpg" alt="Article 1" class="article-image">
+          <a href="../Orbitalmechanics/orbitalmechanics.html" class="article-hover-area">
+            <img src="../images/Orbital Precision.png" alt="Article 1" class="article-image">
             <div class="article-content">
-              <p class="article-time">10.12.2025, 12:40 Uhr</p>
-              <h2 class="article-title">Artificial Intelligence</h2>
-              <p class="article-description">How Artificial Intelligence is Revolutionizing Space Exploration</p>
+              <p class="article-time">05.12.2025, 08:15 Uhr</p>
+              <h2 class="article-title">Mathematik und Himmelsmechanik</h2>
+              <p class="article-description">Die Mathematik der Himmelsmechanik</p>
             </div>
           </a>
         </div>
         <div class="article-container">
-            <!-- Example articles -->
-            <div class="article-card">
-              <a href="../Aispacey/aispace.html" class="article-hover-area">
-                <img src="Images/aispace.jpg" alt="Article 1" class="article-image">
-                <div class="article-content">
-                  <p class="article-time">10.12.2025, 12:40 Uhr</p>
-                  <h2 class="article-title">Artificial Intelligence</h2>
-                  <p class="article-description">How Artificial Intelligence is Revolutionizing Space Exploration</p>
-                </div>
-              </a>
-            </div>
-         <div class="article-container">
-        <!-- Example articles -->
-        <div class="article-card">
-          <a href="../Aispacey/aispace.html" class="article-hover-area">
-            <img src="Images/aispace.jpg" alt="Article 1" class="article-image">
-            <div class="article-content">
-              <p class="article-time">10.12.2025, 12:40 Uhr</p>
-              <h2 class="article-title">Artificial Intelligence</h2>
-              <p class="article-description">How Artificial Intelligence is Revolutionizing Space Exploration</p>
-            </div>
-          </a>
-        </div>
-        <div class="article-container">
-            <!-- Example articles -->
-            <div class="article-card">
-              <a href="../Aispacey/aispace.html" class="article-hover-area">
-                <img src="Images/aispace.jpg" alt="Article 1" class="article-image">
-                <div class="article-content">
-                  <p class="article-time">10.12.2025, 12:40 Uhr</p>
-                  <h2 class="article-title">Artificial Intelligence</h2>
-                  <p class="article-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam aspernatur beatae corporis impedit sunt animi nemo nesciunt voluptatum officiis possimus quos ad laborum voluptates dolores officia, facilis ducimus ab dolore.</p>
-                </div>
-              </a>
-            </div>
-          <div class="article-container">
-        <!-- Example articles -->
-        <div class="article-card">
-          <a href="../Aispacey/aispace.html" class="article-hover-area">
-            <img src="Images/aispace.jpg" alt="Article 1" class="article-image">
-            <div class="article-content">
-              <p class="article-time">10.12.2025, 12:40 Uhr</p>
-              <h2 class="article-title">Artificial Intelligence</h2>
-              <p class="article-description">How Artificial Intelligence is Revolutionizing Space Exploration</p>
-            </div>
-          </a>
-        </div>
-                  
-  <div class="article-container">
-        <!-- Example articles -->
-        <div class="article-card">
-          <a href="../Aispacey/aispace.html" class="article-hover-area">
-            <img src="Images/aispace.jpg" alt="Article 1" class="article-image">
-            <div class="article-content">
-              <p class="article-time">10.12.2025, 12:40 Uhr</p>
-              <h2 class="article-title">Artificial Intelligence</h2>
-              <p class="article-description">How Artificial Intelligence is Revolutionizing Space Exploration</p>
-            </div>
-          </a>
-        </div>
-        <div class="article-container">
-            <!-- Example articles -->
-            <div class="article-card">
-              <a href="../Aispacey/aispace.html" class="article-hover-area">
-                <img src="Images/aispace.jpg" alt="Article 1" class="article-image">
-                <div class="article-content">
-                  <p class="article-time">10.12.2025, 12:40 Uhr</p>
-                  <h2 class="article-title">Artificial Intelligence</h2>
-                  <p class="article-description">How Artificial Intelligence is Revolutionizing Space Exploration</p>
-                </div>
-              </a>
-            </div>
-                 
-     <div class="article-container">
-         <!-- Example articles -->
-          <div class="article-card">
-             <a href="../Aispacey/aispace.html" class="article-hover-area">
-               <img src="Images/aispace.jpg" alt="Article 1" class="article-image">
-              <div class="article-content">
-              <p class="article-time">10.12.2025, 12:40 Uhr</p>
-             <h2 class="article-title">Artificial Intelligence</h2>
-             <p class="article-description">How Artificial Intelligence is Revolutionizing Space Exploration</p>
-         </div>
-         </a>
-        </div>
-               
-      
-
-
-                <div class="article-container">
-                    <!-- Example articles -->
-                    <div class="article-card">
-                      <a href="../Aispacey/aispace.html" class="article-hover-area">
-                        <img src="Images/aispace.jpg" alt="Article 1" class="article-image">
-                        <div class="article-content">
-                          <p class="article-time">10.12.2025, 12:40 Uhr</p>
-                          <h2 class="article-title">Artificial Intelligence</h2>
-                          <p class="article-description">How Artificial Intelligence is Revolutionizing Space Exploration</p>
-                        </div>
-                      </a>
-                    </div>
-                                          
-                    
+            
 
 
 
@@ -288,8 +188,8 @@
         </div>
         <div class="footer-column">
             <h3>Contact Us</h3>
-            <p><i class="fas fa-envelope"></i> Email: <a href="mailto:support@leftsight.com">support@leftsight.com</a></p>
-            <p><i class="fas fa-phone-alt"></i> Phone: +Left-Sight team</p>
+            <p><i class="fas fa-envelope"></i> Email: <a href="mailto:support@leftsight.com">astrofisicistz@gmail.com</a></p>
+            <p><i class="fas fa-phone-alt"></i> Phone: astrofisicistz@gmail.com</p>
         </div>
         
         <div class="footer-apps">

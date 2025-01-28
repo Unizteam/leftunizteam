@@ -1,16 +1,15 @@
-/* General Styles */
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
-  background-color: #080911;
+  background-color: #000000;
   color: white;
 }
 
-/* Header */
 .header {
   display: flex;
   justify-content: space-between;
-  background: linear-gradient(to right, #080911, #111322, #101327, #1b1e2f);
+  background: linear-gradient(to right, #000000, #1b1e2f);
   padding: 10px 20px;
   position: sticky;
   top: 0;
@@ -21,16 +20,16 @@ body {
 }
 
 
-/* Styling for the search link with the icon */
+
 .search-link {
   display: flex;
   align-items: center;
-  gap: 5px; /* Adds space between the text and the icon */
+  gap: 5px; 
 }
 
 .search-link i {
-  font-size: 14px; /* Adjust icon size to match the text */
-  color: white; /* Matches the text color */
+  font-size: 14px; 
+  color: white; 
 }
 
 
@@ -52,7 +51,7 @@ body {
 }
 
 
-/* Subnav - Fixed to Prevent Empty Space */
+
 .subnav {
   background: #fedc00;
   padding: 5px 20px;
@@ -68,16 +67,16 @@ body {
 }
 
 
-/* FIX: Prevent Empty Space Above Subnav */
+
 body::before {
   content: "";
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 40px; /* Covers the space */
-  background: black; /* Fills the gap with black */
-  z-index: 998; /* Behind header & subnav */
+  height: 40px; 
+  background: linear-gradient(to right, #000000, #1b1e2f);
+  z-index: 998; 
 }
 
 
@@ -312,7 +311,7 @@ header .card h3 :hover {
 
 /* Footer */
 footer {
-  background-color: #000000;
+  background-color: #080911;
   padding: 20px;
 }
 
