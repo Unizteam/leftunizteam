@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Left-Sight</title>
+    <link rel="stylesheet" href="bmg2.css">
+</head>
+<body>
+
+    <div class="mobile-header">
+        <div class="logo">
+          <span>Left-Sight</span>
+        </div>
+        <div class="description">
+          <span>Seek science</span>
+        </div>
+        <div class="header-icons">
+          <a href="../Search/search.html" class="search-icon-link">
+            <i class="fas fa-search"></i>
+          </a>
+          <a href="../index.html" class="home-icon-link">
+            <i class="fas fa-home"></i>
+          </a>
+        </div>
+      </div>
+      
+
+
+
+
+      
+    
+    <div class="header sticky">
+        <span>Left-Sight</span>
+        <nav>
+            <a href="#">AI</a>
+            <a href="#">Wissenschaft</a>
+            <a href="#">Math & Physics</a>
+            <a href="../Search/search.html">Suche<i class="fa fa-search"></i></a>
+            <a href="../index.html">Home<i class="fa fa-home"></i></a> 
+        </nav>
+    </div>
+
+
+    <div class="subnav sticky">BMG</div>
+
+    <script>
+        let lastScrollY = window.pageYOffset;
+        const header = document.querySelector('.header');
+        const subnav = document.querySelector('.subnav');
+    
+        window.addEventListener('scroll', () => {
+            const currentScrollY = window.pageYOffset;
+    
+            if (currentScrollY < lastScrollY) {
+                
+                header.style.transform = 'translateY(0)';
+                subnav.style.transform = 'translateY(0)';
+            } else {
+               
+                header.style.transform = 'translateY(-100%)';
+                subnav.style.transform = 'translateY(-100%)';
+            }
+    
+            lastScrollY = currentScrollY;
+        });
+    </script>
+    
+
+
+
+
+
+
+
+
+
+    
+    
+
+    <div class="article-container">
+        <p class="date">02.02.2025, 09:33 Uhr</p>
+        <h1>Bilgisayar Mühendisliği Giriş Final </h1>
+        <p class="intro">Final sınavında çıkan konular</p>
+       
+      
+
+
+
+        <div class="article-section">
+
+            <div class="author-badge">
+                <div class="profile-picture"></div>
+                <div class="author-name">Left-Sight</div>
+            </div>
+    
+            <div class="space"></div>   
+        
+    
+
+
+
+            <div class="space"></div>   
+
+
+
+
+        <div class="c">
+            <h1 class="t">🔌 Mantıksal Kapılar (Logic Gates)</h1>
+            <p class="i">Mantıksal kapılar, <b>dijital elektronik sistemlerinin temel bileşenleridir.</b> 
+            Bu kapılar, girişlere göre belirli bir çıkış üretir. 
+            Aşağıda en yaygın kullanılan 4 mantıksal kapıyı inceleyelim:</p>
+    
+            <!-- AND GATE -->
+            <div class="logic-box">
+                <h2 class="gate-title">AND (VE) Kapısı</h2>
+                <p class="description">AND kapısı, yalnızca <b>her iki giriş de 1 olduğunda</b> çıkış verir.</p>
+                <table class="truth-table">
+                    <tr>
+                        <th>A</th>
+                        <th>B</th>
+                        <th>A AND B</th>
+                    </tr>
+                    <tr><td>0</td><td>0</td><td>0</td></tr>
+                    <tr><td>0</td><td>1</td><td>0</td></tr>
+                    <tr><td>1</td><td>0</td><td>0</td></tr>
+                    <tr><td>1</td><td>1</td><td>1</td></tr>
+                </table>
+            </div>
+            <div class="space"></div>   
+            <!-- OR GATE -->
+            <div class="logic-box">
+                <h2 class="gate-title">OR (VEYA) Kapısı</h2>
+                <p class="description">OR kapısı, girişlerden en az biri 1 olduğunda çıkış verir.</p>
+                <table class="truth-table">
+                    <tr>
+                        <th>A</th>
+                        <th>B</th>
+                        <th>A OR B</th>
+                    </tr>
+                    <tr><td>0</td><td>0</td><td>0</td></tr>
+                    <tr><td>0</td><td>1</td><td>1</td></tr>
+                    <tr><td>1</td><td>0</td><td>1</td></tr>
+                    <tr><td>1</td><td>1</td><td>1</td></tr>
+                </table>
+            </div>
+            <div class="space"></div>   
+            <!-- XOR GATE -->
+            <div class="logic-box">
+                <h2 class="gate-title">XOR (Özel VEYA) Kapısı</h2>
+                <p class="description">XOR kapısı, girişler farklı olduğunda çıkış verir (A ≠ B).</p>
+                <table class="truth-table">
+                    <tr>
+                        <th>A</th>
+                        <th>B</th>
+                        <th>A XOR B</th>
+                    </tr>
+                    <tr><td>0</td><td>0</td><td>0</td></tr>
+                    <tr><td>0</td><td>1</td><td>1</td></tr>
+                    <tr><td>1</td><td>0</td><td>1</td></tr>
+                    <tr><td>1</td><td>1</td><td>0</td></tr>
+                </table>
+            </div>
+            <div class="space"></div>   
+            <!-- NOT GATE -->
+            <div class="logic-box">
+                <h2 class="gate-title">NOT (DEĞİL) Kapısı</h2>
+                <p class="description">NOT kapısı, girişin tersini (inversion) alır.</p>
+                <table class="truth-table">
+                    <tr>
+                        <th>A</th>
+                        <th>NOT A</th>
+                    </tr>
+                    <tr><td>0</td><td>1</td></tr>
+                    <tr><td>1</td><td>0</td></tr>
+                </table>
+            </div>
+        </div>
+
+
+    <div class="spacer"></div>
+
+    <div class="pagination">
+        <a id="prev-page" href="../bmg1.html">
+            <button>Previous</button>
+        </a>
+        <span id="page-info">Page 3 of 4</span>
+        <a id="next-page" href="BMG3/bmg3.html">
+            <button>Next</button>
+        </a>
+      
+        
+       
+       
+      
+
+            
+        
+        </div>
+
+    </div>
+
+
+
+
+
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-links">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+                <a href="#" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+                <a href="#" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+                <a href="#" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
+                <a href="#" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="#" target="_blank"><i class="fab fa-youtube"></i> YouTube</a>
+            </div>
+        </div>
+        <div class="footer-column">
+            <h3>Contact Us</h3>
+            <p><i class="fas fa-envelope"></i> Email: <a href="mailto:support@leftsight.com">astrofisicistz@gmail.com</a></p>
+            <p><i class="fas fa-phone-alt"></i> Phone: astrofisicistz@gmail.com</p>
+        </div>
+        
+        <div class="footer-apps">
+            <h3>Download Our App</h3>
+            <a href="#" target="_blank"><i class="fab fa-google-play"></i> Google Play</a>
+            <a href="#" target="_blank"><i class="fab fa-apple"></i> App Store</a>
+        </div>
+        
+    </div>
+    
+    <div class="footer-contact">
+        <form class="subscribe-form" action="#" method="post" onsubmit="showThankYouMessage(event)">
+          <input type="email" id="email-input" name="email" placeholder="Enter your email" required>
+          <button type="submit">Subscribe</button>
+        </form>
+        <p id="thank-you-message" class="thank-you-message"></p>
+      </div>
+      <p class="copyright">&copy; 2025 Left-Sight All rights reserved.</p>
+      
+    
+</footer>
+
+
+<script src="bmg2.js"></script>
+</body>
+</html>

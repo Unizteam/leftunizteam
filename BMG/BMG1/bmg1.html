@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Left-Sight</title>
+    <link rel="stylesheet" href="bmg1.css">
+</head>
+<body>
+
+    <div class="mobile-header">
+        <div class="logo">
+          <span>Left-Sight</span>
+        </div>
+        <div class="description">
+          <span>Seek science</span>
+        </div>
+        <div class="header-icons">
+          <a href="../../Search/search.html" class="search-icon-link">
+            <i class="fas fa-search"></i>
+          </a>
+          <a href="../../index.html" class="home-icon-link">
+            <i class="fas fa-home"></i>
+          </a>
+        </div>
+      </div>
+      
+
+
+
+
+
+      
+    
+      <div class="header sticky">
+        <span>Left-Sight</span>
+        <nav>
+            <a href="#">AI</a>
+            <a href="#">Wissenschaft</a>
+            <a href="#">Math & Physics</a>
+            <a href="../../Search/search.html">Search <i class="fa fa-search"></i></a>
+            <a href="../../index.html">Home<i class="fa fa-home"></i></a> 
+        </nav>
+    </div>
+
+    <div class="subnav sticky">BMG</div>
+
+    <script>
+        let lastScrollY = window.pageYOffset;
+        const header = document.querySelector('.header');
+        const subnav = document.querySelector('.subnav');
+    
+        window.addEventListener('scroll', () => {
+            const currentScrollY = window.pageYOffset;
+    
+            if (currentScrollY < lastScrollY) {
+                // Scrolling up
+                header.style.transform = 'translateY(0)';
+                subnav.style.transform = 'translateY(0)';
+            } else {
+                // Scrolling down
+                header.style.transform = 'translateY(-100%)';
+                subnav.style.transform = 'translateY(-100%)';
+            }
+    
+            lastScrollY = currentScrollY;
+        });
+    </script>
+    
+
+
+
+
+
+
+
+    
+    
+    
+
+    
+    
+
+    <div class="article-container">
+        <p class="date">02.02.2025, 09:14 Uhr</p>
+        <h1>Bilgisayar Mühendisliği Giriş Final </h1>
+        <p class="intro">Final sınavında çıkan konular</p>
+       
+      
+
+
+
+        <div class="article-section">
+
+            <div class="author-badge">
+                <div class="profile-picture"></div>
+                <div class="author-name">Left-Sight</div>
+            </div>
+    
+            <div class="space"></div>   
+        
+    
+    
+     <div class="kapsul">
+            <h1 class="baslik1">Bit ve Byte Nedir?</h1>
+    
+            <div class="bilgi-kutusu">
+                <h2>1. Bit Nedir?</h2>
+                <p><span class="vurgula">Bit</span>, bilgisayarlarda kullanılan en küçük veri birimidir. 0 veya 1 değerini alabilir.</p>
+                <ul>
+                    <li>İkili sistemde çalışır: <b>0 veya 1</b>.</li>
+                    <li>Elektrik sinyaline dayanır: <b>0 = düşük voltaj, 1 = yüksek voltaj</b>.</li>
+                </ul>
+            </div>
+            <div class="space"></div>   
+            <div class="bilgi-kutusu">
+                <h2>2. Byte Nedir?</h2>
+                <p><span class="vurgula">1 Byte</span> = 8 Bit'tir. Bir karakteri temsil edebilir.</p>
+                <ul>
+                    <li>Örneğin, "A" harfi bilgisayarda 1 Byte yer kaplar.</li>
+                    <li>Veri depolamada kullanılan temel ölçü birimidir.</li>
+                </ul>
+            </div>
+            <div class="space"></div>   
+            <div class="bilgi-kutusu">
+                <h2>3. Bit ve Byte Karşılaştırması</h2>
+                <table class="genel-tablo">
+                    <tr>
+                        <th class="genel-baslik">Birim</th>
+                        <th class="genel-baslik">Bit Cinsinden</th>
+                        <th class="genel-baslik">Kullanım Alanı</th>
+                    </tr>
+                    <tr>
+                        <td class="genel-veri">1 Bit</td>
+                        <td class="genel-veri">1 Bit</td>
+                        <td class="genel-veri">Tek bir 0 veya 1</td>
+                    </tr>
+                    <tr>
+                        <td class="genel-veri">1 Byte</td>
+                        <td class="genel-veri">8 Bit</td>
+                        <td class="genel-veri">Bir karakter</td>
+                    </tr>
+                    <tr>
+                        <td class="genel-veri">1 Kilobyte (KB)</td>
+                        <td class="genel-veri">8,192 Bit</td>
+                        <td class="genel-veri">Küçük metin dosyaları</td>
+                    </tr>
+                    <tr>
+                        <td class="genel-veri">1 Megabyte (MB)</td>
+                        <td class="genel-veri">8,388,608 Bit</td>
+                        <td class="genel-veri">MP3 şarkıları</td>
+                    </tr>
+                    <tr>
+                        <td class="genel-veri">1 Gigabyte (GB)</td>
+                        <td class="genel-veri">8,589,934,592 Bit</td>
+                        <td class="genel-veri">Videolar, büyük belgeler</td>
+                    </tr>
+                    <tr>
+                        <td class="genel-veri">1 Terabyte (TB)</td>
+                        <td class="genel-veri">8,796,093,022,208 Bit</td>
+                        <td class="genel-veri">Büyük veri saklama</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="space"></div>   
+            <div class="bilgi-kutusu">
+                <h2>4. Dolar ($) ve Euro (€) Sembollerinin Bit & Byte Olarak Karşılığı</h2>
+                <p>Bilgisayarda her karakter genellikle <b>1 Byte (8 Bit)</b> olarak saklanır. Ancak bazı özel karakterler daha fazla byte kaplayabilir.</p>
+                <ul>
+                    <li>
+                      <span class="vurgula">"$" sembolü</span> = <b>6 Bit</b>, 
+                      ancak <b>8 Bit (1 Byte) olması için başına 2 sıfır eklenir.</b>  
+                      <pre class="code-box">100100 → 00100100 (8 Bit)</pre>
+                    </li>
+                    <li>
+                      <span class="vurgula">"€" sembolü</span> = <b>14 Bit</b>,  
+                      ancak UTF-8'de 16 Bit (2 Byte) olması için başına 2 sıfır eklenir.  
+                      <pre class="code-box">10000010101100 → 11000010 10101100 (16 Bit)</pre>
+                    </li>
+                </ul>
+                <p>Örneğin:</p>
+                <ul>
+                    <li>1,000 adet "$" sembolü → 1 KB (Kilobyte) yer kaplar.</li>
+                    <li>1,000 adet "€" sembolü → 2 KB (Kilobyte) yer kaplar.</li>
+                </ul>
+            </div>
+          </div>
+          
+          
+    
+    
+        <div class="spacer"></div>
+    
+    <div class="kapsul">
+        <h1 class="baslik1">"Öğüt" Kelimesinin Bit ve Byte Hesaplaması</h1>
+    
+        <!-- Adım 1: Bir Harf Kaç Byte ve Bit? -->
+        <div class="bilgi-kutusu">
+            <h2>1. Bir Harf Kaç Byte ve Bit?</h2>
+            <p>Bilgisayarlarda her karakter <b>Byte (8 Bit)</b> olarak saklanır. Ancak Türkçe karakterler genellikle 2 Byte (16 Bit) yer kaplar.</p>
+        </div>
+        <div class="space"></div>   
+        <!-- Adım 2: "Öğüt" Kelimesinin Karakter Analizi -->
+        <div class="bilgi-kutusu">
+            <h2>2. "Öğüt" Kelimesinin Karakter Analizi</h2>
+            <table class="genel-tablo">
+                <tr>
+                    <th class="genel-baslik">Harf</th>
+                    <th class="genel-baslik">Byte</th>
+                    <th class="genel-baslik">Bit</th>
+                </tr>
+                <tr>
+                    <td class="genel-veri">Ö</td>
+                    <td class="genel-veri">2 Byte</td>
+                    <td class="genel-veri">16 Bit</td>
+                </tr>
+                <tr>
+                    <td class="genel-veri">ğ</td>
+                    <td class="genel-veri">2 Byte</td>
+                    <td class="genel-veri">16 Bit</td>
+                </tr>
+                <tr>
+                    <td class="genel-veri">ü</td>
+                    <td class="genel-veri">2 Byte</td>
+                    <td class="genel-veri">16 Bit</td>
+                </tr>
+                <tr>
+                    <td class="genel-veri">t</td>
+                    <td class="genel-veri">1 Byte</td>
+                    <td class="genel-veri">8 Bit</td>
+                </tr>
+            </table>
+        </div>
+        <div class="space"></div>   
+        <!-- Adım 3: Toplam Byte Hesaplaması -->
+        <div class="bilgi-kutusu">
+            <h2>3. Toplam Byte Hesaplaması</h2>
+            <p>Her harfi toplarsak:</p>
+            <p><b>2 + 2 + 2 + 1 = <span class="vurgula">7 Byte</span></b></p>
+        </div>
+        <div class="space"></div>   
+        <!-- Adım 4: Toplam Bit Hesaplaması -->
+        <div class="bilgi-kutusu">
+            <h2>4. Toplam Bit Hesaplaması</h2>
+            <p>1 Byte = 8 Bit olduğuna göre:</p>
+            <p>
+                (2 × 8) + (2 × 8) + (2 × 8) + (1 × 8) = 
+                <b><span class="vurgula">56 Bit</span></b>
+            </p>
+        </div>
+        <div class="space"></div>   
+        <!-- Adım 5: Sonuç -->
+        <div class="bilgi-kutusu">
+            <h2>5. Sonuç</h2>
+            <p><b>"Öğüt" kelimesi bilgisayarda toplam <span class="vurgula">7 Byte (56 Bit)</span> yer kaplar.</b></p>
+        </div>
+    
+    </div>
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="spacer"></div>
+
+    <div class="pagination">
+        <a id="prev-page" href="../bmg.html">
+            <button>Previous</button>
+        </a>
+        <span id="page-info">Page 2 of 4</span>
+        <a id="next-page" href="BMG2/bmg2.html">
+            <button>Next</button>
+        </a>
+      
+        
+       
+       
+      
+
+            
+        
+        </div>
+
+    </div>
+
+
+
+
+
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-links">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+                <a href="#" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+                <a href="#" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+                <a href="#" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
+                <a href="#" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="#" target="_blank"><i class="fab fa-youtube"></i> YouTube</a>
+            </div>
+        </div>
+        <div class="footer-column">
+            <h3>Contact Us</h3>
+            <p><i class="fas fa-envelope"></i> Email: <a href="mailto:support@leftsight.com">astrofisicistz@gmail.com</a></p>
+            <p><i class="fas fa-phone-alt"></i> Phone: astrofisicistz@gmail.com</p>
+        </div>
+        
+        <div class="footer-apps">
+            <h3>Download Our App</h3>
+            <a href="#" target="_blank"><i class="fab fa-google-play"></i> Google Play</a>
+            <a href="#" target="_blank"><i class="fab fa-apple"></i> App Store</a>
+        </div>
+        
+    </div>
+    
+    <div class="footer-contact">
+        <form class="subscribe-form" action="#" method="post" onsubmit="showThankYouMessage(event)">
+          <input type="email" id="email-input" name="email" placeholder="Enter your email" required>
+          <button type="submit">Subscribe</button>
+        </form>
+        <p id="thank-you-message" class="thank-you-message"></p>
+      </div>
+      <p class="copyright">&copy; 2025 Left-Sight All rights reserved.</p>
+      
+    
+</footer>
+
+
+<script src="bmg1.js"></script>
+</body>
+</html>

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    
+    
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-html.min.js"></script>
+    
+        
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Left-Sight</title>
+    <link rel="stylesheet" href="Raketengrundgleichung.css">
+</head>
+<body>
+
+    <div class="mobile-header">
+        <div class="logo">
+          <span>Left-Sight</span>
+        </div>
+        <div class="description">
+          <span>Seek Science</span>
+        </div>
+        <div class="header-icons">
+          <a href="../Search/search.html" class="search-icon-link">
+            <i class="fas fa-search"></i>
+          </a>
+          <a href="../index.html" class="home-icon-link">
+            <i class="fas fa-home"></i>
+          </a>
+        </div>
+      </div>
+      
+    
+    <div class="header sticky">
+        <span>Left-Sight</span>
+        <nav>
+            <a href="#">KI</a>
+            <a href="#">Wissenschaft</a>
+            <a href="#">Mathe & Physik</a>
+            <a href="../Search/search.html">Suche <i class="fa fa-search"></i></a>
+            <a href="../index.html">Startseite<i class="fa fa-home"></i></a> 
+        </nav>
+    </div>
+
+
+    <div class="subnav sticky">Wissenschaft</div>
+
+    <script>
+        let lastScrollY = window.pageYOffset;
+        const header = document.querySelector('.header');
+        const subnav = document.querySelector('.subnav');
+    
+        window.addEventListener('scroll', () => {
+            const currentScrollY = window.pageYOffset;
+    
+            if (currentScrollY < lastScrollY) {
+                
+                header.style.transform = 'translateY(0)';
+                subnav.style.transform = 'translateY(0)';
+            } else {
+               
+                header.style.transform = 'translateY(-100%)';
+                subnav.style.transform = 'translateY(-100%)';
+            }
+    
+            lastScrollY = currentScrollY;
+        });
+    </script>
+    
+
+
+    <div class="video-section">
+     
+      <div class="image-side">
+        <img id="ad-image" src="cocacola.1.png" alt="Advertisement">
+      </div>
+    
+      
+      <div class="video-container">
+        <video id="ad-video" autoplay playsinline>
+          <source id="video-source" src="cocacola1.mp4" type="video/mp4">
+        </video>
+        <button id="mute-btn" class="mute-btn">🔇 Unmute</button>
+      </div>
+    </div>
+    
+    
+
+    
+
+    
+    <div class="article-container">
+      <p class="date">31.01.2025, 23:47 Uhr</p>
+      <h1>Die Physik der Raketentriebwerke</h1>
+      <p class="intro">Raketentriebwerke sind eine der faszinierendsten Anwendungen der Physik. Sie basieren auf fundamentalen Gesetzen der Mechanik und Thermodynamik.</p>
+      
+      <div class="article-section">
+          <div class="author-badge">
+              <div class="profile-picture"></div>
+              <div class="author-name">Left-Sight</div>
+          </div>
+          
+          <div class="space"></div>
+          
+          <div class="kapsul">
+              <h2 class="baslik1">1. Newtons drittes Gesetz und die Bewegung von Raketen</h2>
+              <p>Newtons drittes Gesetz besagt:</p>
+              <pre class="code-block-content"><code class="language-math"> F_{Aktion} = -F_{Reaktion} </code></pre>
+              <p>Das bedeutet, dass jede Aktion eine gleich große, aber entgegengesetzte Reaktion erzeugt.</p>
+              
+              <h3>Raketengrundgleichung:</h3>
+              <pre class="code-block-content"><code class="language-math"> \Delta v = v_e \ln \left( \frac{m_0}{m_f} \right) </code></pre>
+          </div>
+          
+          <div class="chart-container">
+              <div class="headers">
+                  <button class="enlarge-btn icon-btn" title="Expand Chart">
+                      <img src="expand-icon.png" alt="Expand" />
+                      Expand Chart
+                  </button>
+              </div>
+              <div class="chart">
+                  <img src="ch1.png" alt="Zusammenhang zwischen Treibstoffverbrauch und Geschwindigkeitszuwachs" class="formula-img">
+              </div>
+          </div>
+          
+          <div class="space"></div>
+          
+          <h2 class="baslik1">2. Thermodynamik und Fluidmechanik in der Raketentechnologie</h2>
+          <h3>Thermodynamik der Treibstoffverbrennung:</h3>
+          <pre class="code-block-content"><code class="language-math"> Q = m c_p \Delta T </code></pre>
+          <p>Hierbei ist \( Q \) die freigesetzte Wärmemenge.</p>
+          
+          <h3>Fluidmechanik des Gasstroms:</h3>
+          <pre class="code-block-content"><code class="language-math"> v_e = \sqrt{ \frac{2 \gamma}{\gamma -1} R T_0 \left(1 - \left( \frac{p_e}{p_0} \right)^{(\gamma -1)/\gamma} \right) } </code></pre>
+          
+          <div class="chart-container">
+              <div class="headers">
+                  <button class="enlarge-btn icon-btn" title="Expand Chart">
+                      <img src="expand-icon.png" alt="Expand" />
+                      Expand Chart
+                  </button>
+              </div>
+              <div class="chart">
+                  <img src="chart.png" alt="Einfluss des Umgebungsdrucks auf die Ausströmgeschwindigkeit" class="formula-img">
+              </div>
+          </div>
+          
+          <div class="space"></div>
+          
+          <h2 class="baslik1">3. Fazit</h2>
+          <p>Die Effizienz eines Raketentriebwerks wird durch eine Kombination aus Newtons drittem Gesetz, thermodynamischen Prinzipien und fluidmechanischen Gesetzmäßigkeiten bestimmt. Eine höhere Ausströmgeschwindigkeit der Gase und eine optimierte Treibstoffverbrennung führen zu einem besseren Schub und einer effizienteren Rakete.</p>
+      </div>
+  </div>
+  
+  <div class="spacer"></div>
+
+  <p class="interesse">Das könnte für Sie von Interesse sein</p>
+
+ 
+
+  <div class="article-card">
+    <a href="../Orbitalmechanics/orbitalmechanics.html" class="article-hover-area">
+        <img src="../images/Mathematik und Himmelsmechanik.png" alt="Now what john dee?" class="article-image">
+        <div class="article-content">
+            <p class="article-time">01.29.2025, 10:51 Uhr</p>
+            <h2 class="article-title">Mathematik und Himmelsmechanik</h2>
+            <p class="article-description">
+              Die Mathematik der Himmelsmechanik...
+            </p>
+        </div>
+    </a>
+</div>
+
+
+
+
+<div class="article-card">
+  <a href="../Ada/ada.html" class="article-hover-area">
+      <img src="../images/AdaGeschproache.png" alt="Now what john dee?" class="article-image">
+      <div class="article-content">
+          <p class="article-time">01.28.2025, 09:30 Uhr</p>
+          <h2 class="article-title"> Ada-Programmiersprache</h2>
+          <p class="article-description">
+            Die Rolle der Programmiersprache Ada in Raumfahrtunternehmen und der Wissenschaft...
+          </p>
+      </div>
+  </a>
+</div>
+
+
+<div class="article-card">
+  <a href="../Aispacey/aispace.html" class="article-hover-area">
+      <img src="../aispace.jpg" alt="Now what john dee?" class="article-image">
+      <div class="article-content">
+          <p class="article-time">01.30.2025, 12:40 Uhr</p>
+          <h2 class="article-title">Künstliche Intelligenz</h2>
+          <p class="article-description">
+            Wie Künstliche Intelligenz die Raumfahrt revolutioniert...
+          </p>
+      </div>
+  </a>
+</div>
+
+<div class="spacer"></div>
+
+
+
+
+</body>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-links">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+                <a href="#" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+                <a href="#" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+                <a href="#" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
+                <a href="#" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="#" target="_blank"><i class="fab fa-youtube"></i> YouTube</a>
+            </div>
+        </div>
+        <div class="footer-column">
+            <h3>Contact Us</h3>
+            <p><i class="fas fa-envelope"></i> Email: <a href="mailto:support@leftsight.com">astrofisicistz@gmail.com</a></p>
+            <p><i class="fas fa-phone-alt"></i> Phone: astrofisicistz@gmail.com</p>
+        </div>
+        
+        <div class="footer-apps">
+            <h3>Download Our App</h3>
+            <a href="#" target="_blank"><i class="fab fa-google-play"></i> Google Play</a>
+            <a href="#" target="_blank"><i class="fab fa-apple"></i> App Store</a>
+        </div>
+        
+    </div>        
+    
+    
+    <div class="footer-contact">
+        <form class="subscribe-form" action="#" method="post" onsubmit="showThankYouMessage(event)">
+          <input type="email" id="email-input" name="email" placeholder="Enter your email" required>
+          <button type="submit">Subscribe</button>
+        </form>
+        <p id="thank-you-message" class="thank-you-message"></p>
+      </div>
+      <p class="copyright">&copy; 2025 Left-Sight All rights reserved.</p>
+      
+    
+</footer>
+
+
+<script src="Prism.js"></script>
+<script src="Raketengrundgleichung.js"></script>
+</body>
+</html>

@@ -1,69 +1,91 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Handle subnav blur effect on scroll
+
   window.addEventListener("scroll", () => {
     const subnav = document.querySelector(".subnav");
-    if (window.scrollY > 50) {
-      subnav.style.backdropFilter = "blur(50px)";
-      subnav.style.webkitBackdropFilter = "blur(50px)";
-    } else {
-      subnav.style.backdropFilter = "none";
-      subnav.style.webkitBackdropFilter = "none";
+    if (subnav) {
+      if (window.scrollY > 50) {
+        subnav.style.backdropFilter = "blur(50px)";
+        subnav.style.webkitBackdropFilter = "blur(50px)";
+      } else {
+        subnav.style.backdropFilter = "none";
+        subnav.style.webkitBackdropFilter = "none";
+      }
     }
   });
 
-  // Handle enlarge functionality for all charts
   const enlargeButtons = document.querySelectorAll(".enlarge-btn");
+  const fullScreenView = document.createElement("div");
+  fullScreenView.classList.add("full-screen");
+  fullScreenView.innerHTML = `
+    <div class="overlay"></div>
+    <button class="close-button">&times;</button>
+    <img id="full-screen-img" src="" alt="Expanded Image">
+  `;
+  document.body.appendChild(fullScreenView);
+
+  const fullScreenImg = fullScreenView.querySelector("#full-screen-img");
+  const overlay = fullScreenView.querySelector(".overlay");
+  const closeBtn = fullScreenView.querySelector(".close-button");
+
   enlargeButtons.forEach((button) => {
-    const chartContainer = button.closest(".chart-container");
-    const fullScreenView = chartContainer.querySelector(".full-screen");
-    const overlay = fullScreenView.querySelector(".overlay");
-    const closeBtn = fullScreenView.querySelector(".close-button");
-
     button.addEventListener("click", () => {
-      fullScreenView.style.display = "flex";
-    });
+      const chartContainer = button.closest(".chart-container");
+      const img = chartContainer.querySelector(".chart img");
 
-    closeBtn.addEventListener("click", () => {
-      fullScreenView.style.display = "none";
-    });
-
-    overlay.addEventListener("click", () => {
-      fullScreenView.style.display = "none";
+      if (img) {
+        fullScreenImg.src = img.src;
+        fullScreenView.style.display = "flex";
+        fullScreenView.style.justifyContent = "center";
+        fullScreenView.style.alignItems = "center";
+      }
     });
   });
 
-  // Handle copy functionality for all code blocks
+  closeBtn.addEventListener("click", () => {
+    fullScreenView.style.display = "none";
+  });
+
+  overlay.addEventListener("click", () => {
+    fullScreenView.style.display = "none";
+  });
+
   const copyButtons = document.querySelectorAll(".copy-button");
   copyButtons.forEach((button) => {
     button.addEventListener("click", () => {
-      const codeBlock = button.closest(".code-block").querySelector(".code-block-content").innerText;
+      const codeBlock = button.closest(".code-block")?.querySelector("pre code, code.language-css, code.language-html");
 
-      navigator.clipboard.writeText(codeBlock).then(
+      if (!codeBlock) {
+        alert("Kod bulunamadı.");
+        return;
+      }
+
+      const textToCopy = codeBlock.textContent.trim();
+
+      navigator.clipboard.writeText(textToCopy).then(
         () => {
-          button.innerText = "Kopiert";
-          button.style.color = "#00cc00"; // Green for success feedback
+          button.textContent = "✅ Kopiert";
+          button.style.color = "#00cc00"; 
 
           setTimeout(() => {
-            button.innerText = "Copy code";
+            button.textContent = "📋 Code kopieren";
             button.style.color = "";
-          }, 2000);
+          }, 3000);
         },
         () => {
-          alert("Kod kopyalanamadı.");
+          alert("Kopiert.");
         }
       );
     });
   });
 
-  // Advertisement System
   const ads = [
-    { image: "cocacola.1.png", video: "cocacola1.mp4" },
-    { image: "trairline1.png", video: "trairlinevid.mp4" },
-    { image: "spotify.png", video: "spotify.mp4" },
-    { image: "db.1.png", video: "dbvid.mp4" }
+    { image: "cocacola.1.png", video: "cocacola1.mp4", link: "https://www.coca-cola-deutschland.de/" },
+    { image: "trairline1.png", video: "trairlinevid.mp4", link: "https://www.turkishairlines.com/de-de/" },
+    { image: "spotify.png", video: "spotify.mp4", link: "https://www.spotify.com/de-de/" },
+    { image: "db.1.png", video: "dbvid.mp4", link: "https://vitaminwell.de/" },
+    { image: "delight.png", video: "scas.mp4", link: "https://www.nike.com/de/" }
   ];
 
-  // Get last played ad index from localStorage, or start from 0
   let currentAdIndex = localStorage.getItem("lastAdIndex");
   currentAdIndex = currentAdIndex !== null ? (parseInt(currentAdIndex) + 1) % ads.length : 0;
 
@@ -71,56 +93,58 @@ document.addEventListener("DOMContentLoaded", () => {
   const sourceElement = document.getElementById("video-source");
   const imageElement = document.getElementById("ad-image");
   const muteButton = document.getElementById("mute-btn");
+  const imageLink = document.createElement("a");
 
-  // Function to load an advertisement
+  imageElement.parentNode.insertBefore(imageLink, imageElement);
+  imageLink.appendChild(imageElement);
+
   const loadAd = (index) => {
     const ad = ads[index];
-    imageElement.src = ad.image;
-    sourceElement.src = ad.video;
-    videoElement.load(); // Reload video
-    localStorage.setItem("lastAdIndex", index); // Save current ad index
+    if (imageElement && sourceElement && videoElement) {
+      imageElement.src = ad.image;
+      sourceElement.src = ad.video;
+      imageLink.href = ad.link;
+      imageLink.target = "_blank";
+      videoElement.load();
+      localStorage.setItem("lastAdIndex", index);
 
-    // Play video automatically after change
-    videoElement.play().catch(error => {
-      console.log("Autoplay blocked after ad change.");
-    });
+      videoElement.play().catch(() => {
+        console.log("Autoplay blocked after ad change.");
+      });
+    }
   };
 
-  // Function to load the next advertisement when video ends
   const loadNextAd = () => {
-    currentAdIndex = (currentAdIndex + 1) % ads.length; // Cycle through ads sequentially
+    currentAdIndex = (currentAdIndex + 1) % ads.length;
     loadAd(currentAdIndex);
-    enableSoundAndPlay(); // Ensure sound settings persist
+    enableSoundAndPlay();
   };
 
-  // Ensure video plays with sound after first interaction
   const enableSoundAndPlay = () => {
-    videoElement.muted = false;
-    videoElement.volume = 1.0;
-    videoElement.play().catch(error => {
-      console.log("Autoplay with sound blocked. Waiting for user interaction...");
-    });
+    if (videoElement) {
+      videoElement.muted = false;
+      videoElement.volume = 1.0;
+      videoElement.play().catch(() => {
+        console.log("Autoplay with sound blocked. Waiting for user interaction...");
+      });
+    }
   };
 
-  // Autoplay only after first user interaction (click/tap)
   document.body.addEventListener("click", () => {
     enableSoundAndPlay();
   }, { once: true });
 
-  // Automatically load the next ad when the video ends
-  videoElement.addEventListener("ended", () => {
-    loadNextAd(); // Move to the next ad in sequence
-  });
+  if (videoElement) {
+    videoElement.addEventListener("ended", loadNextAd);
 
-  // Mute / Unmute button functionality
-  muteButton.addEventListener("click", () => {
-    videoElement.muted = !videoElement.muted;
-    muteButton.textContent = videoElement.muted ? "🔇 Unmute" : "🔊 Mute";
-  });
+    muteButton.addEventListener("click", () => {
+      videoElement.muted = !videoElement.muted;
+      muteButton.textContent = videoElement.muted ? "🔇 Unmute" : "🔊 Mute";
+    });
 
-  videoElement.muted = true; // Start with sound muted
-  muteButton.textContent = "🔇 Unmute"; // Button should indicate Unmute option
+    videoElement.muted = true;
+    muteButton.textContent = "🔇 Unmute";
 
-  // Load the next ad on page refresh
-  loadAd(currentAdIndex);
+    loadAd(currentAdIndex);
+  }
 });

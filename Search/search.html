@@ -42,7 +42,7 @@
             <a href="#">Wissenschaft</a>
             <a href="#">Mathe & Physik</a>
             <a href="../Search/search.html">Suche<i class="fa fa-search"></i></a>
-            <a href="../index.html">Home<i class="fa fa-home"></i></a> 
+            <a href="../index.html">Startseite<i class="fa fa-home"></i></a> 
         </nav>
     </div>
 
@@ -74,7 +74,7 @@
 <div id="search-results"></div>
 
 <script>
-  const searchInput = document.getElementById('search-input'); // Make sure you have a search input field with this ID
+  const searchInput = document.getElementById('search-input'); 
 
   fetch('content.json')
     .then(response => response.json())
@@ -126,13 +126,12 @@
 
 
 
-        <!-- articles -->
         <div class="article-card">
           <a href="../Aispacey/aispace.html" class="article-hover-area">
             <img src="Images/aispace.jpg" alt="Article 1" class="article-image">
             <div class="article-content">
-              <p class="article-time">10.12.2025, 12:40 Uhr</p>
-              <h2 class="article-title">Artificial Intelligence</h2>
+              <p class="article-time">31.01.2025, 15:41 Uhr</p>
+              <h2 class="article-title">Künstliche Intelligenz</h2>
               <p class="article-description">Wie Künstliche Intelligenz die Raumfahrt revolutioniert.</p>
             </div>
           </a>
@@ -143,11 +142,11 @@
            
             <div class="article-card">
               <a href="../Ada/ada.html" class="article-hover-area">
-                <img src="../images/adaschprache.png" alt="Article 1" class="article-image">
+                <img src="../images/AdaGeschproache.png" alt="Article 1" class="article-image">
                 <div class="article-content">
-                  <p class="article-time">17.12.2025, 14:30 Uhr</p>
+                  <p class="article-time">30.01.2025, 17:53 Uhr</p>
                   <h2 class="article-title">Ada-Programmiersprache</h2>
-                  <p class="article-description">Die Rolle der Programmiersprache Ada in Raumfahrtunternehmen und der Wissenschaft</p>
+                  <p class="article-description">Die Rolle der Programmiersprache Ada in Raumfahrtunternehmen und der Wissenschaft...</p>
                 </div>
               </a>
             </div>
@@ -155,18 +154,52 @@
      
         <div class="article-card">
           <a href="../Orbitalmechanics/orbitalmechanics.html" class="article-hover-area">
-            <img src="../images/Orbital Precision.png" alt="Article 1" class="article-image">
+            <img src="../images/Mathematik und Himmelsmechanik.png" alt="Article 1" class="article-image">
             <div class="article-content">
-              <p class="article-time">05.12.2025, 08:15 Uhr</p>
+              <p class="article-time">31.01.2025, 21:03 Uhr</p>
               <h2 class="article-title">Mathematik und Himmelsmechanik</h2>
               <p class="article-description">Die Mathematik der Himmelsmechanik</p>
             </div>
+
+          </a></div>
+
+            <div class="article-card">
+              <a href="../Watt/watt.html" class="article-hover-area">
+                <img src="../images/Programming simulations for space missions.png" alt="Article 3" class="article-image">
+                <div class="article-content">
+                  <p class="article-time">30.01.2025, 12:24 Uhr</p>
+                  <h2 class="article-title">Programmiersimulationen für Weltraummissionen</h2>
+                  <p class="article-description">Die Rolle von Programmiersprachen in der Simulation von Raketenstarts und Weltraummissionen</p>
+                </div>
+</a>
+            </div>
+
+
+
+                <div class="article-card">
+                  <a href="../Raketengrundgleichung/Raketengrundgleichung.html" class="article-hover-area">
+                    <img src="../images/erra.png" alt="Article 2" class="article-image">
+                    <div class="article-content">
+                      <p class="article-time">31.01.2025, 23:47 Uhr</p>
+                      <h2 class="article-title">Die Physik der Raketentriebwerke</h2>
+                      <p class="article-description">Raketentriebwerke sind eine der faszinierendsten Anwendungen der Physik. Sie basieren auf fundamentalen Gesetzen der Mechanik und Thermodynamik.</p>
+                    </div>
           </a>
         </div>
-        <div class="article-container">
-            
+      
 
 
+
+        <div class="article-card">
+          <a href="../BMG/bmg.html" class="article-hover-area">
+            <img src="../images/BMG-picture.png" alt="Article 1" class="article-image">
+            <div class="article-content">
+              <p class="article-time">02.02.2025, 09:03 Uhr</p>
+              <h2 class="article-title">Bilgisayar Mühendisliği Giriş Final</h2>
+              <p class="article-description">Bu notlar ağırlıklı olarak final sınavında çıkan sorular üzerinden hazırlandı. Sitedeki notlarda daha çok mantıksal ve matematiksel konular ele alındı. Sözel konular ise aşağıda yüklediğim PDF'te bulunmaktadır.</p>
+            </div>
+          </a>
+        </div>
 
   
       <button id="load-more-button" class="load-more">Mehr Laden</button>
