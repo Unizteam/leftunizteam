@@ -59,11 +59,11 @@
             const currentScrollY = window.pageYOffset;
     
             if (currentScrollY < lastScrollY) {
-                // Scrolling up
+              
                 header.style.transform = 'translateY(0)';
                 subnav.style.transform = 'translateY(0)';
             } else {
-                // Scrolling down
+            
                 header.style.transform = 'translateY(-100%)';
                 subnav.style.transform = 'translateY(-100%)';
             }
@@ -199,13 +199,13 @@
     <div class="kapsul">
         <h1 class="baslik1">"Öğüt" Kelimesinin Bit ve Byte Hesaplaması</h1>
     
-        <!-- Adım 1: Bir Harf Kaç Byte ve Bit? -->
+        <!-- Bir Harf Kaç Byte ve Bit? -->
         <div class="bilgi-kutusu">
             <h2>1. Bir Harf Kaç Byte ve Bit?</h2>
             <p>Bilgisayarlarda her karakter <b>Byte (8 Bit)</b> olarak saklanır. Ancak Türkçe karakterler genellikle 2 Byte (16 Bit) yer kaplar.</p>
         </div>
         <div class="space"></div>   
-        <!-- Adım 2: "Öğüt" Kelimesinin Karakter Analizi -->
+        <!-- "Öğüt" Analizi -->
         <div class="bilgi-kutusu">
             <h2>2. "Öğüt" Kelimesinin Karakter Analizi</h2>
             <table class="genel-tablo">
@@ -237,14 +237,14 @@
             </table>
         </div>
         <div class="space"></div>   
-        <!-- Adım 3: Toplam Byte Hesaplaması -->
+        <!--  Toplam Byte  -->
         <div class="bilgi-kutusu">
             <h2>3. Toplam Byte Hesaplaması</h2>
             <p>Her harfi toplarsak:</p>
             <p><b>2 + 2 + 2 + 1 = <span class="vurgula">7 Byte</span></b></p>
         </div>
         <div class="space"></div>   
-        <!-- Adım 4: Toplam Bit Hesaplaması -->
+        <!-- Toplam Bit  -->
         <div class="bilgi-kutusu">
             <h2>4. Toplam Bit Hesaplaması</h2>
             <p>1 Byte = 8 Bit olduğuna göre:</p>
@@ -254,7 +254,7 @@
             </p>
         </div>
         <div class="space"></div>   
-        <!-- Adım 5: Sonuç -->
+        <!-- Sonuç -->
         <div class="bilgi-kutusu">
             <h2>5. Sonuç</h2>
             <p><b>"Öğüt" kelimesi bilgisayarda toplam <span class="vurgula">7 Byte (56 Bit)</span> yer kaplar.</b></p>
