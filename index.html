@@ -192,17 +192,48 @@
         <a href="#" target="_blank"><i class="fab fa-apple"></i> App Store</a>
       </div>
     </div>
-  
     <div class="footer-contact">
-      <form class="subscribe-form" action="#" method="post" onsubmit="showThankYouMessage(event)">
+      <form class="subscribe-form" onsubmit="submitEmail(event)">
         <input type="email" id="email-input" name="email" placeholder="Enter your email" required>
         <button type="submit">Subscribe</button>
       </form>
       <p id="thank-you-message" class="thank-you-message"></p>
     </div>
     <p class="copyright">&copy; 2025 Left-Sight All rights reserved.</p>
-  </footer>
-  
+    <script>
+      function submitEmail(event) {
+        event.preventDefault();
+    
+        let email = document.getElementById("email-input").value;
+        let thankYouMessage = document.getElementById("thank-you-message");
+    
+        fetch("https://your-flask-api.onrender.com/submit-email", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ email: email })
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.error) {
+                thankYouMessage.style.color = "red";
+                thankYouMessage.innerText = "❌ " + data.error;
+            } else {
+                thankYouMessage.style.color = "green";
+                thankYouMessage.innerText = "✅ Thank you for subscribing!";
+                document.getElementById("email-input").value = "";
+            }
+            thankYouMessage.style.display = "block";
+        })
+        .catch(error => {
+            thankYouMessage.style.color = "red";
+            thankYouMessage.innerText = "❌ Something went wrong!";
+            console.error("Error:", error);
+        });
+      }
+    </script>
+    
 
 
 <script src="script.js"></script>
