@@ -1,13 +1,10 @@
 const contentsPerPage = 20; 
 let currentPage = 1; 
 
-
 const allContents = Array.from(document.querySelectorAll('.topic-cards .card'));
-
 
 const urlParams = new URLSearchParams(window.location.search);
 currentPage = parseInt(urlParams.get('page')) || 1;
-
 
 function renderContents() {
   const startIndex = (currentPage - 1) * contentsPerPage;
@@ -37,15 +34,19 @@ function updatePaginationControls() {
   window.history.replaceState(null, '', `?page=${currentPage}`);
 
   document.getElementById('prevPage').addEventListener('click', () => {
-    currentPage--;
-    renderContents();
-    window.scrollTo(0, 0); 
+    if (currentPage > 1) {
+      currentPage--;
+      renderContents();
+      window.scrollTo(0, 0); 
+    }
   });
 
   document.getElementById('nextPage').addEventListener('click', () => {
-    currentPage++;
-    renderContents();
-    window.scrollTo(0, 0); 
+    if (currentPage < totalPages) {
+      currentPage++;
+      renderContents();
+      window.scrollTo(0, 0); 
+    }
   });
 }
 

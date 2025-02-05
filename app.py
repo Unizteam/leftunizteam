@@ -1,44 +1,37 @@
+import os
+import psycopg2
 from flask import Flask, request, jsonify
 from flask_cors import CORS
-import psycopg2
-import os
 
 app = Flask(__name__)
-CORS(app)  # Enable Cross-Origin Requests
 
-# Load database credentials from environment variables (Recommended for security)
-DATABASE_URL = os.getenv("DATABASE_URL", "postgresql://your_user:your_password@db.your_supabase_url.com:5432/postgres")
+# ✅ Allow only Netlify frontend for better security
+CORS(app, resources={r"/*": {"origins": "https://leftiesinnovative.netlify.app"}})
 
-# Function to connect to PostgreSQL
+# ✅ Use External DATABASE_URL (since Netlify is external to Render)
+DATABASE_URL = os.getenv("DATABASE_URL", "postgresql://leftsight_db_user:ATtiJ5lQR9oSFdVQnWriIn330K6R8DEQ@dpg-cuhrvp5umphs73a69b90-a.oregon-postgres.render.com/leftsight_db")
+
+# ✅ Function to connect to PostgreSQL
 def get_db_connection():
-    try:
-        conn = psycopg2.connect(DATABASE_URL, sslmode="require")  # Use SSL for Supabase
-        return conn
-    except Exception as e:
-        print(f"❌ Database connection error: {e}")
-        return None
+    return psycopg2.connect(DATABASE_URL, sslmode="require")
 
-# Create table if it doesn't exist
+# ✅ Create 'subscribers' table if it doesn't exist
 def create_table():
     conn = get_db_connection()
-    if conn:
-        cur = conn.cursor()
-        cur.execute("""
-            CREATE TABLE IF NOT EXISTS subscribers (
-                id SERIAL PRIMARY KEY,
-                email TEXT UNIQUE NOT NULL
-            );
-        """)
-        conn.commit()
-        cur.close()
-        conn.close()
-        print("✅ Table 'subscribers' is ready.")
-    else:
-        print("❌ Failed to connect to the database.")
+    cur = conn.cursor()
+    cur.execute("""
+        CREATE TABLE IF NOT EXISTS subscribers (
+            id SERIAL PRIMARY KEY,
+            email TEXT UNIQUE NOT NULL
+        );
+    """)
+    conn.commit()
+    cur.close()
+    conn.close()
 
-# Run table creation on startup
-create_table()
+create_table()  # Run table creation on startup
 
+# ✅ API Route to Receive and Store Emails
 @app.route('/submit-email', methods=['POST'])
 def receive_email():
     data = request.json
@@ -49,19 +42,15 @@ def receive_email():
 
     try:
         conn = get_db_connection()
-        if not conn:
-            return jsonify({"error": "Database connection failed"}), 500
-
         cur = conn.cursor()
         cur.execute("INSERT INTO subscribers (email) VALUES (%s) ON CONFLICT DO NOTHING", (email,))
         conn.commit()
-
         cur.close()
         conn.close()
-
         return jsonify({"message": "Subscription successful", "email": email}), 200
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
+# ✅ Run Flask App on Port 5000
 if __name__ == '__main__':
     app.run(debug=True, port=5000)
